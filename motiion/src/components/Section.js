@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Section = ({ children }) => {
+const Section = ({ children, style }) => {
   return (
-  <Wrapper>
+  <section style={{...style}}>
     <Container>
       {children} 
     </Container>    
-  </Wrapper>
+  </section>
 )}
 
 export default Section;
@@ -18,10 +18,6 @@ const Container = styled.div`
   width: 960px;
   margin: auto;
   position: relative;
-  height: 100%;
-`;
-
-const Wrapper = styled.section`
-  width: 100%;
-  height: 660px;
+  min-height: 660px;
+  position: relative;
 `;
