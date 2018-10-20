@@ -10,9 +10,9 @@ const Header = ({ siteTitle }) => (
       <Link to="/"><Logo src={LogoPng} ></Logo></Link>
       <FlexContainer>
         <Links>
-          <CustomLink to="/" activeClassName="active" exact ><span>Home</span></CustomLink>
-          <CustomLink to="/careers" activeClassName="active" exact ><span>Careers</span></CustomLink>
-          <CustomLink to="/blogs" activeClassName="active" exact ><span>Blogs</span></CustomLink>
+          <CustomLink to="/" activeClassName="active"><span>Home</span></CustomLink>
+          <CustomLink to="/careers" activeClassName="active"><span>Careers</span></CustomLink>
+          <CustomLink to="/blogs" activeClassName="active"><span>Blogs</span></CustomLink>
         </Links>
         <Links>
           <Icon src={FacebookWhite} ></Icon>

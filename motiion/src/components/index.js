@@ -1,7 +1,10 @@
-export { default as Section } from './Section';
+export { default as SectionContainer } from './SectionContainer';
 export { default as RoundBtn } from './RoundBtn';
 export { default as PaddingDiv } from './PaddingDiv';
 export { default as HorizontalLine } from './HorizontalLine';
 export { default as PlayFairText } from './PlayFairText';
 export { default as RobotoText } from './RobotoText';
 export { default as InfoAside } from './InfoAside';
+export { default as BlogSide } from './BlogSide';
+export { default as MoreButton } from './MoreButton';
+export { default as PostSummary } from './PostSummary';
