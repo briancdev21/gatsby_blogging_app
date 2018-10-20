@@ -5,7 +5,7 @@ const PaddingDiv = styled.div`
   padding-bottom: ${props => (props.bottom ? `${props.bottom}px` : 0)};
   padding-left: ${props => (props.left ? `${props.left}px` : 0)};
   padding-right: ${props => (props.right ? `${props.right}px` : 0)};
-  height: ${props => (props.height ? `${props.height}px` : 'inherit')};
+  height: ${props => (props.height ? `${props.height}px` : 'initial')};
 `;
 
 export default PaddingDiv;

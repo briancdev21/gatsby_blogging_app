@@ -8,3 +8,7 @@ export { default as InfoAside } from './InfoAside';
 export { default as BlogSide } from './BlogSide';
 export { default as MoreButton } from './MoreButton';
 export { default as PostSummary } from './PostSummary';
+export { default as FloatContactSection } from './FloatContactSection';
+export { default as FlexContainer } from './FlexContainer';
+export { default as FlexView } from './FlexView';
+export { default as SubscribeEmail } from './SubscribeEmail';

@@ -3,7 +3,7 @@ import LinesEllipsis from 'react-lines-ellipsis'
 
 import { Layout } from '../layouts'
 import { FirstWeEatMain, FirstWeEatSideBg, InfoDetail } from '../styles';
-import { SectionContainer, PaddingDiv, HorizontalLine, RoundBtn, PlayFairText, RobotoText, InfoAside, BlogSide, MoreButton, PostSummary } from '../components';
+import { SectionContainer, PaddingDiv, HorizontalLine, RoundBtn, PlayFairText, RobotoText, InfoAside, BlogSide, MoreButton, PostSummary, FloatContactSection, FlexContainer, FlexView, SubscribeEmail } from '../components';
 import { icArrowWhite } from '../images';
 
 const IndexPage = () => {
@@ -41,6 +41,7 @@ const IndexPage = () => {
             <FirstWeEatSideBg />
           </SectionContainer>
         </section>
+        {/* 'Our Technologies ...' Section */}
         <section style={{ background: '#f5f5f5' }}>
           <SectionContainer>
             <InfoAside width={320} >
@@ -71,7 +72,7 @@ const IndexPage = () => {
         {/* 'What are we up to' Blog Section */}
         <section style={{ background: '#111', height: 810, position: 'relative' }}>
           <SectionContainer style={{ textAlign: 'center', display: 'block'}}>
-            <PaddingDiv top={95} bottom={20}>
+            <PaddingDiv top={80} bottom={20}>
               <PlayFairText size="60" weight="900" color="#fff">
                 What are we up to?
               </PlayFairText>
@@ -96,13 +97,14 @@ const IndexPage = () => {
                       </PaddingDiv>
                       <RobotoText color="#fff" size="24" weight="600"> {blog.title}
                       </RobotoText>
-                      <PaddingDiv top={30} bottom={30}>
+                      <PaddingDiv top={20} bottom={20}>
                         <HorizontalLine size={60} color="#fff" height={3} />
                       </PaddingDiv>
                       <PaddingDiv
-                        bottom={45}
+                        bottom={35}
                         style={{
                           minHeight: 100,
+                          opacity: 0.8,
                         }}
                       >
                         <RobotoText color="#fff" size="16" weight="300">
@@ -126,6 +128,43 @@ const IndexPage = () => {
           </SectionContainer>
           <BlogSide />
         </section>
+        {/* Contact Section */}
+        <section style={{position: 'relative'}}>
+          <FloatContactSection>
+            <div className="side">
+              <HorizontalLine size={60} color="#fff" height={1} />
+              <HorizontalLine size={60} color="#fff" height={1} />
+              <HorizontalLine size={60} color="#fff" height={1} />
+            </div>
+            <SectionContainer style={{minHeight: 0, height: '100%'}}>
+              <FlexView size={5}>
+                <FlexContainer
+                  style={{
+                    flexDirection: 'column',
+                    alignItems: 'flex-start',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <PlayFairText size={36} color="#fff" weight={900}>
+                    Stay in touch?
+                  </PlayFairText>
+                  <PaddingDiv top={5} botom={5}>
+                    <RobotoText size={20} color="#fff" weight={300}>
+                      Sign up for updates from Motiion
+                    </RobotoText>
+                  </PaddingDiv>
+                </FlexContainer>
+              </FlexView>
+              <FlexView size={7}>
+                <FlexContainer>
+                  <SubscribeEmail />
+                </FlexContainer>
+              </FlexView>
+            </SectionContainer>
+            <div className="side" />
+          </FloatContactSection>
+        </section>
+        <PaddingDiv top={50} bottom={100} />
       </Layout>
     </React.Fragment>
   )
