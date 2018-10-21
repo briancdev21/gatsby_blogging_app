@@ -27,6 +27,11 @@ export const HeaderWrapper = styled.header`
   height: 60px;
   width: 100%;
   background-color: #1E22AA;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 10px rgba(2, 2, 2, 0.7);
 `;
 
 export const Container = styled.div`

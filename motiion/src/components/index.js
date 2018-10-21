@@ -12,3 +12,6 @@ export { default as FloatContactSection } from './FloatContactSection';
 export { default as FlexContainer } from './FlexContainer';
 export { default as FlexView } from './FlexView';
 export { default as SubscribeEmail } from './SubscribeEmail';
+export { default as SocialIcon } from './SocialIcon';
+export { default as ProfileLogo } from './ProfileLogo';
+export { default as Profile } from './Profile';
