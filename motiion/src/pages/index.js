@@ -42,9 +42,9 @@ const IndexPage = () => {
           </SectionContainer>
         </section>
         {/* 'Our Technologies ...' Section */}
-        <section style={{ background: '#f5f5f5' }}>
+        <section style={{ background: '#f5f5f5', overflow: 'hidden' }}>
           <SectionContainer>
-            <InfoAside width={320} >
+            <InfoAside width={320}>
               <PlayFairText size="48" weight="900" color="#fff">
                 Our technology supports the global food industry
               </PlayFairText>

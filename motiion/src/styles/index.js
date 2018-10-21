@@ -20,7 +20,7 @@ export const FirstWeEatMain = styled.div`
 
 export const InfoDetail = styled.div`
   font-size: 20px;
-  overflow: hidden;
+  width: 640px;
   padding: 80px 0 125px 60px;
   flex: 1;
 

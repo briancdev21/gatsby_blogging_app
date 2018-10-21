@@ -11,7 +11,8 @@ export const CustomLink = styled(Link)`
   text-decoration: none;
 
   & span {
-    padding: 10px;
+    padding: 10px 5px;
+    margin: 0 10px;
     border-bottom: none;
   }
   &.active {

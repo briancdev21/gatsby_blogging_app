@@ -24,9 +24,6 @@ const Main = styled.div`
 	letter-spacing: 0.84px;
 	line-height: 60px;
   text-align: right;
-  position: absolute;
-  top: 0;
-  left: 0;
 `;
 
 const SideBg = styled.div`
