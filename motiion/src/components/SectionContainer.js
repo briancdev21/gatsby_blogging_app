@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const SectionContainer = ({ children, style, alignItems }) => {
+const SectionContainer = ({ children, style, alignItems, column }) => {
   return (
-    <Container alignItems={alignItems} style={{...style}}>
+    <Container alignItems={alignItems} style={{...style}} column={column}>
       {children}
     </Container>
 )}
@@ -11,7 +11,7 @@ const SectionContainer = ({ children, style, alignItems }) => {
 export default SectionContainer;
 
 const Container = styled.div`
-  display: flex;
+  display: ${props => props.column ? 'block' : 'flex'};
   align-items: ${props => props.alignItems ? props.alignItems : 'flex-start'};
   width: 960px;
   margin: auto;

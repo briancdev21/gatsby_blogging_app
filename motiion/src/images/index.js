@@ -1,5 +1,6 @@
 export { default as Facebook } from './Facebook.png';
 export { default as icArrowWhite } from './ic_arrow-white.png';
+export { default as icArrowBlue } from './ic_arrow-blue.png';
 export { default as LinkedinWhite } from './Linkedin-white.png';
 export { default as TwitterWhite } from './Twitter-white.png';
 export { default as FacebookWhite } from './Facebook-white.png';
