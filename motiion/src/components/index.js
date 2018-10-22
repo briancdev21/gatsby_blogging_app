@@ -15,3 +15,4 @@ export { default as SubscribeEmail } from './SubscribeEmail';
 export { default as SocialIcon } from './SocialIcon';
 export { default as ProfileLogo } from './ProfileLogo';
 export { default as Profile } from './Profile';
+export { default as RectButton } from './RectButton';

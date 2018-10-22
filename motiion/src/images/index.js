@@ -10,3 +10,4 @@ export { default as Twitter } from './Twitter.png';
 export { default as ProfilePhotoAre } from './profile_photo-are.png';
 export { default as ProfilePhotoDag } from './profile_photo-dag.png';
 export { default as ProfilePhotoMaren } from './profile_photo-maren.png';
+export { default as EmptyLogo } from './empty-logo.png';
