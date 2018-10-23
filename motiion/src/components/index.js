@@ -18,3 +18,5 @@ export { default as Profile } from './Profile';
 export { default as RectButton } from './RectButton';
 export { default as BackBtn } from './BackBtn';
 export { default as FeatureList } from './FeatureList';
+export { default as SearchBox } from './SearchBox';
+export { default as Card } from './Card';
