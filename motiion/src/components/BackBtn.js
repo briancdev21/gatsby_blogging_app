@@ -8,7 +8,7 @@ const BackBtn = ({ url, title }) => {
   return (
     <FlexContainer justifyContent="flex-start">
       <Img src={icArrowBlack} alt="back" />Back to
-      <a href={url} style={{ textDecoration: 'none', padding: '0 10px', color: '#1e22aa' }}>{title}</a>
+      <a href={url} style={{ textDecoration: 'none', padding: '0 6px', color: '#1e22aa' }}>{title}</a>
     </FlexContainer>
   )
 }

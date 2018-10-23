@@ -16,6 +16,5 @@ const Container = styled.div`
   width: 960px;
   margin: auto;
   position: relative;
-  min-height: 660px;
   position: relative;
 `;

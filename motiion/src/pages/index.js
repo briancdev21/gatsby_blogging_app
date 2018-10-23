@@ -25,7 +25,7 @@ const IndexPage = () => {
         ]}
       >
         <section>
-          <SectionContainer alignItems="center">
+          <SectionContainer alignItems="center" style={{ minHeight: 660 }} >
             <FirstWeEatMain>
               <PaddingDiv>
                 <PlayFairText size="72" weight="900" >First we eat</PlayFairText>
@@ -35,7 +35,7 @@ const IndexPage = () => {
                 <HorizontalLine size={60} height={3} />
               </PaddingDiv>
               <PaddingDiv>
-                <RoundBtn size={20} bgColor="#1e22aa" color="#fff" >Learn more</RoundBtn>
+                <RoundBtn size={20} bgColor="#1e22aa" color="#fff" link="/careers">Learn more</RoundBtn>
               </PaddingDiv>
             </FirstWeEatMain>
             <FirstWeEatSideBg />

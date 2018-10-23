@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import { Layout } from '../layouts'
 import { SectionContainer, PaddingDiv, PlayFairText, RobotoText, MoreButton, FlexContainer, FlexView, HorizontalLine, RectButton, BackBtn } from '../components';
@@ -15,7 +16,7 @@ const IndexPage = () => {
         ]}
       >
         <section>
-          <SectionContainer column style={{ minHeight: 0 }}>
+          <SectionContainer column>
             <PaddingDiv top={20} bottom={10}>
               <BackBtn url={"/"} title={'Home'} />
             </PaddingDiv>
@@ -51,13 +52,13 @@ const IndexPage = () => {
               </p>
             </div>
             <PaddingDiv bottom={60}>
-              <MoreButton style={{ color: '#1e22aa', justifyContent: 'flex-start' }} href={'#'}>See opportunities <img src={icArrowBlue} alt="white arrow"/></MoreButton>
+              <MoreButton style={{ color: '#1e22aa', justifyContent: 'flex-start' }} href={'#opportunities'}>See opportunities <img src={icArrowBlue} alt="white arrow"/></MoreButton>
             </PaddingDiv>
           </SectionContainer>
         </section>
         <section style={{ background: '#F5F5F5' }}>
           <SectionContainer column>
-            <PaddingDiv top={100} bottom={20}>
+            <PaddingDiv top={80} bottom={20}>
               <RobotoText size="24" weight="600" color="#000">
                 Why we are different
               </RobotoText>
@@ -160,21 +161,21 @@ const IndexPage = () => {
           </SectionContainer>
         </section>
         {/*  */}
-        <section style={{ background: '#F5F5F5' }}>
-          <SectionContainer column style={{ minHeight: 0 }}>
-            <PaddingDiv top={100} bottom={30}>
+        <section style={{ background: '#F5F5F5' }} id="opportunities">
+          <SectionContainer column>
+            <PaddingDiv top={70} bottom={30}>
               <RobotoText size="24" weight="600" color="#000">
                 Open positions
               </RobotoText>
             </PaddingDiv>
             <PaddingDiv bottom={100}>
-              <FlexContainer justifyContent="space-between">
-                <RectButton>
-                  <RobotoText size="24" weight="500" color="#1e22aa">
-                    Product Manager
-                  </RobotoText>
+              <FlexContainer justifyContent="space-between" style={{ margin: '0 -15px' }}>
+                <RectButton link="/job">
+                    <RobotoText size="24" weight="500" color="#1e22aa">
+                      Product Manager
+                    </RobotoText>
                 </RectButton>
-                <RectButton>
+                <RectButton link="/job">
                   <RobotoText size="24" weight="500" color="#1e22aa">
                     Software Engineer
                   </RobotoText>
@@ -185,7 +186,7 @@ const IndexPage = () => {
                     Back-end focused
                   </RobotoText>
                 </RectButton>
-                <RectButton>
+                <RectButton link="/job">
                   <RobotoText size="24" weight="500" color="#1e22aa">
                     Software Engineer
                   </RobotoText>

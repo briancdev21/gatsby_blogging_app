@@ -9,3 +9,23 @@ html, body {
 body {
   margin: 0;
 }
+
+li {
+  margin-bottom: 0.5em;
+}
+
+.featurelist li {
+    margin-left: 25px;
+    list-style: none;
+  }
+
+.featurelist li:before {
+  content: '\2022';
+  color: '#000';
+  position: relative;
+  right: 25px;
+}
+
+.featurelist b {
+  margin-left: -5px;
+}
