@@ -2,6 +2,7 @@ export { default as Facebook } from './Facebook.png';
 export { default as icArrowWhite } from './ic_arrow-white.png';
 export { default as icArrowBlue } from './ic_arrow-blue.png';
 export { default as icArrowBlack } from './ic_arrow-black.png';
+export { default as icSearch } from './ic_search.png';
 
 export { default as LinkedinWhite } from './Linkedin-white.png';
 export { default as TwitterWhite } from './Twitter-white.png';

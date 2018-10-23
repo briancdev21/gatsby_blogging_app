@@ -1,5 +1,4 @@
 import React from 'react'
-import LinesEllipsis from 'react-lines-ellipsis'
 
 import { Layout } from '../layouts'
 import { FirstWeEatMain, FirstWeEatSideBg, InfoDetail } from '../styles';
@@ -80,47 +79,11 @@ const IndexPage = () => {
                 <MoreButton >More blogs <img src={icArrowWhite} alt="white arrow"/></MoreButton>
               </PaddingDiv>
               <PaddingDiv top={40}>
-                <div style={{display: 'flex', flexWrap: 'row wrap'}}>
+                <div style={{display: 'flex', flexWrap: 'row wrap', margin: '0 -15px' }}>
                   {blogs.map((blog, index) => (
-                    <PostSummary key={index}>
-                      <PaddingDiv bottom={20}>
-                        <RoundBtn
-                          style={{
-                            borderRadius: 12, border: 'solid 1px #fff', padding: '8px 25px'
-                          }}
-                          size={10}
-                          bgColor="transparent"
-                          color="#fff"
-                        >
-                          WAY OF WORK
-                        </RoundBtn>
-                      </PaddingDiv>
-                      <RobotoText color="#fff" size="24" weight="600"> {blog.title}
-                      </RobotoText>
-                      <PaddingDiv top={20} bottom={20}>
-                        <HorizontalLine size={60} color="#fff" height={3} />
-                      </PaddingDiv>
-                      <PaddingDiv
-                        bottom={35}
-                        style={{
-                          minHeight: 100,
-                          opacity: 0.8,
-                        }}
-                      >
-                        <RobotoText color="#fff" size="16" weight="300">
-                          <LinesEllipsis
-                            text={blog.content}
-                            maxLine={4}
-                            ellipsis='...'
-                            trimRight
-                            basedOn='words'
-                          />
-                        </RobotoText>
-                      </PaddingDiv>
-                      <PaddingDiv>
-                        <RoundBtn size={16} bgColor="#fff" color="#1e22aa" >Read more</RoundBtn>
-                      </PaddingDiv>
-                    </PostSummary>
+                    <FlexView size={1} style={{ margin: 15 }}>
+                      <PostSummary key={index} blog={blog} />
+                    </FlexView>
                   ))}
                 </div>
               </PaddingDiv>
