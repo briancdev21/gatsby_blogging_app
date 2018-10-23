@@ -20,3 +20,4 @@ export { default as BackBtn } from './BackBtn';
 export { default as FeatureList } from './FeatureList';
 export { default as SearchBox } from './SearchBox';
 export { default as Card } from './Card';
+export { default as BlogLoadMoreBtn } from './BlogLoadMoreBtn';

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Layout } from '../layouts'
-import { SectionContainer, PaddingDiv, PlayFairText, SearchBox, FlexContainer, BackBtn, PostSummary, Card } from '../components';
+import { SectionContainer, PaddingDiv, PlayFairText, SearchBox, FlexContainer, BackBtn, PostSummary, Card, BlogLoadMoreBtn } from '../components';
 
 const loadedBlogs = [{
   title: "Mottion Collaboration Tools",
@@ -38,8 +38,8 @@ const BlogsPage = () => {
           </SectionContainer>
         </section>
         <section style={{ background: '#f5f5f5' }}>
-          <SectionContainer>
-            <PaddingDiv top={40} bottom={40}>
+          <SectionContainer column>
+            <PaddingDiv top={60} bottom={40}>
               <FlexContainer style={{flexWrap: 'row wrap', margin: '0 -15px' }}>
                 {loadedBlogs.map((blog, index) => (
                   <Card>
@@ -48,8 +48,11 @@ const BlogsPage = () => {
                 ))}
               </FlexContainer>
             </PaddingDiv>
-
+            <FlexContainer>
+              <BlogLoadMoreBtn />
+            </FlexContainer>
           </SectionContainer>
+          <PaddingDiv bottom={300} />
         </section>
       </Layout>
     </React.Fragment>
