@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Layout } from '../layouts'
-import { SectionContainer, PaddingDiv, PlayFairText, RobotoText, MoreButton, FlexContainer, FlexView, HorizontalLine, RectButton } from '../components';
+import { SectionContainer, PaddingDiv, PlayFairText, RobotoText, MoreButton, FlexContainer, FlexView, HorizontalLine, RectButton, BackBtn } from '../components';
 import { icArrowBlue, EmptyLogo } from '../images';
 
 const IndexPage = () => {
@@ -16,8 +16,8 @@ const IndexPage = () => {
       >
         <section>
           <SectionContainer column style={{ minHeight: 0 }}>
-            <PaddingDiv top={10} bottom={10}>
-              Back to <a href="/">Home</a>
+            <PaddingDiv top={20} bottom={10}>
+              <BackBtn url={"/"} title={'Home'} />
             </PaddingDiv>
             <PaddingDiv top={10} bottom={40}>
               <PlayFairText weight="900" size={72} color="#000">
@@ -162,7 +162,7 @@ const IndexPage = () => {
         {/*  */}
         <section style={{ background: '#F5F5F5' }}>
           <SectionContainer column style={{ minHeight: 0 }}>
-            <PaddingDiv top={100} bottom={20}>
+            <PaddingDiv top={100} bottom={30}>
               <RobotoText size="24" weight="600" color="#000">
                 Open positions
               </RobotoText>
@@ -170,12 +170,12 @@ const IndexPage = () => {
             <PaddingDiv bottom={100}>
               <FlexContainer justifyContent="space-between">
                 <RectButton>
-                  <RobotoText size="24" weight="600" color="#1e22aa">
+                  <RobotoText size="24" weight="500" color="#1e22aa">
                     Product Manager
                   </RobotoText>
                 </RectButton>
                 <RectButton>
-                  <RobotoText size="24" weight="600" color="#1e22aa">
+                  <RobotoText size="24" weight="500" color="#1e22aa">
                     Software Engineer
                   </RobotoText>
                   <RobotoText size="20" weight="400" color="#1e22aa">
@@ -186,7 +186,7 @@ const IndexPage = () => {
                   </RobotoText>
                 </RectButton>
                 <RectButton>
-                  <RobotoText size="24" weight="600" color="#1e22aa">
+                  <RobotoText size="24" weight="500" color="#1e22aa">
                     Software Engineer
                   </RobotoText>
                   <RobotoText size="20" weight="400" color="#1e22aa">

@@ -16,3 +16,4 @@ export { default as SocialIcon } from './SocialIcon';
 export { default as ProfileLogo } from './ProfileLogo';
 export { default as Profile } from './Profile';
 export { default as RectButton } from './RectButton';
+export { default as BackBtn } from './BackBtn';
