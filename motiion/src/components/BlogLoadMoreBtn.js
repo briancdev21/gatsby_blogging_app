@@ -3,9 +3,9 @@ import React from 'react'
 
 import { icDownArrow } from '../images'
 
-const BlogLoadMoreBtn = () => {
+const BlogLoadMoreBtn = ({ moreLoadHander }) => {
   return (
-    <Container>
+    <Container onClick={moreLoadHander}>
       <span>Load more</span>
       <Img src={icDownArrow} />
     </Container>

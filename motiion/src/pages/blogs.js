@@ -1,62 +1,104 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { graphql } from 'gatsby'
 
 import { Layout } from '../layouts'
+import { getClient } from '../services/ContentfulClient'
 import { SectionContainer, PaddingDiv, PlayFairText, SearchBox, FlexContainer, BackBtn, PostSummary, Card, BlogLoadMoreBtn } from '../components';
 
-const loadedBlogs = [{
-  title: "Mottion Collaboration Tools",
-  content: "In a previous post, we discussed some of the goals we have for collaboration at Motiion. In this post we’ll dig deeper into the actual tools enabling our way of work. We’ll focus on our work. In a previous post, we discussed some of the goals we have for collaboration at Motiion. In this post we’ll dig deeper into the actual tools enabling our way of work. We’ll focus on our work.", 
- },
- {
-   title: "Motiion Way of Work Goals",
-   content: "Motiion is currently a small, remote-only company. We are excited about the opportunities that this brings and we want to make we get a set of tools and processes that make remote collaboration effective, enjoyable work. Motiion is currently a small, remote-only company. We are excited about the opportunities that this brings and we want to make we get a set of tools and processes that make remote collaboration effective, enjoyable work.",
- }];
 
-const BlogsPage = () => {
-  return (
-    <React.Fragment>
-      <Layout
-        pageTitle='Blogs'
-        meta={[
-          { name: 'description', content: 'Mottion PWA Blogs' },
-          { name: 'keywords', content: 'Mottion, Gatsby, PWA, Blogs' },
-        ]}
-      >
-        <section>
-          <SectionContainer column>
-            <PaddingDiv top={20} bottom={10}>
-              <BackBtn url={"/"} title={'Home'} />
-            </PaddingDiv>
-            <PaddingDiv top={10} bottom={40}>
-              <FlexContainer justifyContent="space-between">
-                <PlayFairText weight="900" size={72} color="#000">
-                  Blogs
-                </PlayFairText>
-                <SearchBox placeholder="Search blog" />
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        contentful {
+          space,
+          accessToken
+        }
+      }
+    }
+  }
+`
+
+class BlogsPage extends Component {
+  state = {
+    blogs: [],
+    skip: 0,
+  }
+
+  componentDidMount() {
+    this.loadEntries();
+  }
+
+  loadEntries = async () => {
+    const { skip, blogs } = this.state;
+    const { data } = this.props;
+    const { space, accessToken } = data.site.siteMetadata.contentful;
+    const client = getClient(space, accessToken);
+    const entriesResponse = await client.getEntries({
+      content_type: 'blogPost',
+      skip: skip,
+      limit: 2,
+      order: 'sys.createdAt'
+    });
+    const newBlogs = entriesResponse.items.map((entry) => entry.fields);
+    this.setState({ blogs: blogs.concat(newBlogs), skip: skip + 2 });
+  }
+
+  moreLoadHander = () => {
+    this.loadEntries();
+  }
+
+  moreReadHandler = () => {
+
+  }
+  
+  render() {
+    const { blogs } = this.state;
+    return (
+      <React.Fragment>
+        <Layout
+          pageTitle='Blogs'
+          meta={[
+            { name: 'description', content: 'Mottion PWA Blogs' },
+            { name: 'keywords', content: 'Mottion, Gatsby, PWA, Blogs' },
+          ]}
+        >
+          <section>
+            <SectionContainer column>
+              <PaddingDiv top={20} bottom={10}>
+                <BackBtn url={"/"} title={'Home'} />
+              </PaddingDiv>
+              <PaddingDiv top={10} bottom={40}>
+                <FlexContainer justifyContent="space-between">
+                  <PlayFairText weight="900" size={72} color="#000">
+                    Blogs
+                  </PlayFairText>
+                  <SearchBox placeholder="Search blog" />
+                </FlexContainer>
+              </PaddingDiv>
+            </SectionContainer>
+          </section>
+          <section style={{ background: '#f5f5f5' }}>
+            <SectionContainer column>
+              <PaddingDiv top={60} bottom={40}>
+                <FlexContainer style={{ flexFlow: 'row wrap', margin: '0 -15px', justifyContent: 'flex-start' }}>
+                  {blogs.map((blog, index) => (
+                    <Card key={index}>
+                      <PostSummary blog={blog} blackTheme />
+                    </Card>
+                  ))}
+                </FlexContainer>
+              </PaddingDiv>
+              <FlexContainer>
+                <BlogLoadMoreBtn moreLoadHander={this.moreLoadHander} />
               </FlexContainer>
-            </PaddingDiv>
-          </SectionContainer>
-        </section>
-        <section style={{ background: '#f5f5f5' }}>
-          <SectionContainer column>
-            <PaddingDiv top={60} bottom={40}>
-              <FlexContainer style={{flexWrap: 'row wrap', margin: '0 -15px' }}>
-                {loadedBlogs.map((blog, index) => (
-                  <Card>
-                    <PostSummary key={index} blog={blog} blackTheme />
-                  </Card>
-                ))}
-              </FlexContainer>
-            </PaddingDiv>
-            <FlexContainer>
-              <BlogLoadMoreBtn />
-            </FlexContainer>
-          </SectionContainer>
-          <PaddingDiv bottom={300} />
-        </section>
-      </Layout>
-    </React.Fragment>
-  )
+            </SectionContainer>
+            <PaddingDiv bottom={300} />
+          </section>
+        </Layout>
+      </React.Fragment>
+    )
+  }
 }
 
 export default BlogsPage
