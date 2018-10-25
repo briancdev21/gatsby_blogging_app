@@ -9,6 +9,10 @@ export const FirstWeEatSideBg = styled.div`
   z-index: 9;
   right: 0;
   top: 0;
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 `
 
 export const FirstWeEatMain = styled.div`
@@ -16,6 +20,11 @@ export const FirstWeEatMain = styled.div`
   top: 0;
   left: 0;
   z-index: 10;
+  @media only screen and (max-width: 600px) {
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
 `
 
 export const InfoDetail = styled.div`
@@ -26,5 +35,10 @@ export const InfoDetail = styled.div`
 
   & > p {
     margin-top: 50px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    padding: 120px 10px 60px 10px;
   }
 `

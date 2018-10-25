@@ -33,6 +33,7 @@ class IndexPage extends Component {
 
   render() {
     const { blogs } = this.state;
+    const isMobile = window.innerWidth < 600;
     return (
       <React.Fragment>
         <Layout
@@ -43,7 +44,7 @@ class IndexPage extends Component {
           ]}
         >
           <section>
-            <SectionContainer alignItems="center" style={{ minHeight: 660 }} >
+            <SectionContainer alignItems="center" style={{ minHeight: isMobile ? 520 : 660 }} >
               <FirstWeEatMain>
                 <PaddingDiv>
                   <PlayFairText size="72" weight="900" >First we eat</PlayFairText>
@@ -62,14 +63,14 @@ class IndexPage extends Component {
           {/* 'Our Technologies ...' Section */}
           <section style={{ background: '#f5f5f5', overflow: 'hidden' }}>
             <SectionContainer>
-              <InfoAside width={320}>
+              <InfoAside width={isMobile ? '100%' : 320}>
                 <PlayFairText size="48" weight="900" color="#fff">
                   Our technology supports the global food industry
                 </PlayFairText>
-                <HorizontalLine size={60} color="#fff" height={4} />
+                <HorizontalLine size={60} color="#fff" height={4} style={{ display: isMobile ? 'none' : 'block'}} />
               </InfoAside>
               <InfoDetail>
-                <HorizontalLine size={6000} color="#1e22aa" height={2} />
+                <HorizontalLine size={6000} color="#1e22aa" height={2} style={{ display: isMobile ? 'none' : 'block'}} />
                 <p>
                   We’ re a global technology team developing solutions to support the global food industry.The Motiion Platform supports information flows within and across companies in the food value chain, enabling players in the industry to focus on their own specific tools and systems.
                 </p>
@@ -88,17 +89,26 @@ class IndexPage extends Component {
             </SectionContainer>
           </section>
           {/* 'What are we up to' Blog Section */}
-          <section style={{ background: '#111', height: 810, position: 'relative' }}>
+          <section style={{ background: '#111', height: isMobile ? 'auto' : 810, position: 'relative' }}>
             <SectionContainer style={{ textAlign: 'center', display: 'block'}}>
               <PaddingDiv top={80} bottom={20}>
-                <PlayFairText size="60" weight="900" color="#fff">
-                  What are we up to?
+                <PlayFairText size={isMobile ? 40 : 60} weight="900" color="#fff">
+                  {!isMobile && (
+                    <PaddingDiv left={10} right={10}>
+                      What are we up to?
+                    </PaddingDiv>
+                  )}              
+                  {isMobile && (
+                    <PaddingDiv left={50} right={50}>
+                      What are we up to?
+                    </PaddingDiv>
+                  )}
                 </PlayFairText>
                 <PaddingDiv top={20} bottom={20}>
                   <MoreButton href={"/blogs"}>More blogs <img src={icArrowWhite} alt="white arrow"/></MoreButton>
                 </PaddingDiv>
                 <PaddingDiv top={40}>
-                  <div style={{display: 'flex', flexWrap: 'row wrap', margin: '0 -15px' }}>
+                  <div style={{display: 'flex', flexFlow: 'row wrap', margin: isMobile ? 0 : '0 -15px' }}>
                     {blogs.map((blog, index) => (
                       <FlexView key={index} size={1} style={{ margin: 15 }}>
                         <PostSummary blog={blog} />
@@ -108,78 +118,7 @@ class IndexPage extends Component {
                 </PaddingDiv>
               </PaddingDiv>
             </SectionContainer>
-            <BlogSide />
-          </section>
-          {/* Contact Section */}
-          <section style={{position: 'relative'}}>
-            <FloatContactSection>
-              <div className="side">
-                <HorizontalLine size={60} color="#fff" height={1} />
-                <HorizontalLine size={60} color="#fff" height={1} />
-                <HorizontalLine size={60} color="#fff" height={1} />
-              </div>
-              <SectionContainer style={{minHeight: 0, height: '100%'}}>
-                <FlexView size={5}>
-                  <FlexContainer
-                    style={{
-                      flexDirection: 'column',
-                      alignItems: 'flex-start',
-                      justifyContent: 'center',
-                    }}
-                  >
-                    <PlayFairText size={36} color="#fff" weight={900}>
-                      Stay in touch?
-                    </PlayFairText>
-                    <PaddingDiv top={5} botom={5}>
-                      <RobotoText size={20} color="#fff" weight={300}>
-                        Sign up for updates from Motiion
-                      </RobotoText>
-                    </PaddingDiv>
-                  </FlexContainer>
-                </FlexView>
-                <FlexView size={7}>
-                  <FlexContainer>
-                    <SubscribeEmail />
-                  </FlexContainer>
-                </FlexView>
-              </SectionContainer>
-              <div className="side" />
-            </FloatContactSection>
-          </section>
-          {/* Personal Info Section */}
-          <section style={{ background: '' }}>
-            <PaddingDiv top={220} bottom={140} style={{ width: 1280, margin: 'auto' }}>
-              <FlexContainer>
-                <HorizontalLine color={'#1e22aa'} size={260} height={1} />
-                <FlexView size={1} style={{ textAlign: 'center' }}>
-                  <PlayFairText size={60} weight={900} color={'#000'}>
-                    We have built large scale technology companies
-                  </PlayFairText>
-                </FlexView>
-                <HorizontalLine color={'#1e22aa'} size={260} height={1} />
-              </FlexContainer>
-            </PaddingDiv>
-            <SectionContainer style={{ flexDirection: 'column' }}>
-              <Profile 
-                title="Are Traasdahl"
-                userRole="FOUNDER / CEO"
-                profileLink={ProfilePhotoAre}
-                content={"<p>Are has more than 20 years’ experience in mobile and digital content. He was the Founder & CEO of Tapad Inc. In 2016, Telenor Group acquired Tapad for $360M, making it the fifth largest venture-backed M&A exit in New York since 2009.</p><p>Traasdahl is a frequent contributor for outlets such as CNBC and Bloomberg News, and he has been featured in Forbes, the Wall Street Journal, Ad Age and other major news outlets. He was named Global Startup Awards’ Founder of the Year in 2016 and EY Entrepreneur of the Year in 2014. Prior to Tapad, he founded Thumbplay, a mobile entertainment service that he grew to more than $100MM in revenues in less than 3 years before he exited the company (the company, later acquired by Clear Channel, is now called iHeartRadio).</p>"
-                }
-              />
-              <Profile
-                title="Dag Liodden"
-                userRole="FOUNDER / TECHNOLOGY"
-                profileLink={ProfilePhotoDag}
-                content="Dag is a technologist and entrepreneur. He co-founded Tapad Inc in 2010 and served as its Chief Technology Officer through 2017. Working in startups from the ground up in most of his career, he has built systems ranging from mobile applications, logistics systems and payment processing solutions to high throughput trading systems leveraging the bleeding edge of machine learning. Liodden is passionate about technology and loves building teams that build great products."
-              />
-              <Profile
-                title="Maren Flasnes"
-                userRole="PRODUCT"
-                profileLink={ProfilePhotoMaren}
-                content="Maren worked for Boston Consulting Group for almost 5 years, as a Management Consultant and Project Leader. During this time, she worked with Strategy, Digitalization & Advanced analytics, and operational improvement for leading Nordic and international Corporations, primarily within Media, Technology & Telecom and the Financial Industry. She started her career as a journalist and game reviewer in the Norwegian daypress in parallel with her university studies. Maren holds an MSc in Industrial Economics and Technology Management from the Norwegian University of Science and Technology (NTNU) and the University of Edinburgh with a major in operations research."
-              />
-            </SectionContainer>
+            <BlogSide isMobile={isMobile} />
           </section>
           <PaddingDiv top={30} bottom={30} />
         </Layout>

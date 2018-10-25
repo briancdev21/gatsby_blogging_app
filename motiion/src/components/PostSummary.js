@@ -71,12 +71,17 @@ const PostSummary = ({ blog, style, blackTheme, hideContent }) => {
 
 const Container = styled.article`
   text-align: left;
+  min-width: 300px;
 
   &:nth-child(even) {
     padding-left: 15px;
   }
   &:nth-child(odd) {
     padding-right: 15px;
+  }
+
+  @media (max-width: 600px) {
+    margin-bottom: 30px;
   }
 `;
 

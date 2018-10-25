@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const BlogSide = (style) => {
+const BlogSide = ({ style, isMobile }) => {
   return (
-    <div style={{...style}}>
+    <div style={{...style}} hidden={isMobile}>
       <FlexContainer>
         <Line />
         <Text>BLOG</Text>

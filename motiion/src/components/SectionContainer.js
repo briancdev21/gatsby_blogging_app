@@ -17,4 +17,10 @@ const Container = styled.div`
   margin: auto;
   position: relative;
   position: relative;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    flex-flow: column;
+    justify-content: center;
+  }
 `;
