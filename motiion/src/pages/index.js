@@ -81,8 +81,8 @@ const IndexPage = () => {
               <PaddingDiv top={40}>
                 <div style={{display: 'flex', flexWrap: 'row wrap', margin: '0 -15px' }}>
                   {blogs.map((blog, index) => (
-                    <FlexView size={1} style={{ margin: 15 }}>
-                      <PostSummary key={index} blog={blog} />
+                    <FlexView key={index} size={1} style={{ margin: 15 }}>
+                      <PostSummary blog={blog} />
                     </FlexView>
                   ))}
                 </div>

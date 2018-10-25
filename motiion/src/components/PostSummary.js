@@ -5,7 +5,7 @@ import LinesEllipsis from 'react-lines-ellipsis'
 import { PaddingDiv, HorizontalLine, RoundBtn,  RobotoText } from '../components';
 
 const PostSummary = ({ blog, style, blackTheme }) => {
-  const { title, content } = blog;
+  const { title, content, sys } = blog;
   const bgColor = blackTheme ? '#000' : '#fff';
   const btnColor = blackTheme ? '#fff' : '#1e22aa';
   const btnBgColor =  blackTheme ? '#1e22aa' : '#fff';
