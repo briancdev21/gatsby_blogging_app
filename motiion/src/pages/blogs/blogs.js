@@ -1,24 +1,10 @@
 
 import React, { Component } from 'react'
-import { graphql } from 'gatsby'
 
 import { Layout } from '../../layouts'
 import { getClient } from '../../services/ContentfulClient'
 import { SectionContainer, PaddingDiv, PlayFairText, SearchBox, FlexContainer, BackBtn, PostSummary, Card, BlogLoadMoreBtn } from '../../components';
-
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        contentful {
-          space,
-          accessToken
-        }
-      }
-    }
-  }
-`
+import * as config from '../../config'
 
 class Blogs extends Component {
   state = {
@@ -32,8 +18,7 @@ class Blogs extends Component {
 
   loadEntries = async () => {
     const { skip, blogs } = this.state;
-    const { data } = this.props;
-    const { space, accessToken } = data.site.siteMetadata.contentful;
+    const { space, accessToken } = config.contentful;
     const client = getClient(space, accessToken);
     const entriesResponse = await client.getEntries({
       content_type: 'blogPost',
@@ -41,7 +26,7 @@ class Blogs extends Component {
       limit: 2,
       order: 'sys.createdAt'
     });
-    const newBlogs = entriesResponse.items.map((entry) => entry.fields);
+    const newBlogs = entriesResponse.items;
     this.setState({ blogs: blogs.concat(newBlogs), skip: skip + 2 });
   }
 
