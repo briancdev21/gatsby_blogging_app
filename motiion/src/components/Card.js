@@ -4,8 +4,9 @@ const Card = styled.div`
   background: #fff;
   max-width: calc(50% - 30px);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex: 1;
+  align-items: flex-start;
+  justify-content: flex-start;;
   flex-direction: column;
   box-shadow: inset 0 1px 3px rgba(0,0,0,0.12), inset 0px 0px 3px 0px rgba(0,0,0,0.24);
   border-radius: 6px;

@@ -4,12 +4,11 @@ import LinesEllipsis from 'react-lines-ellipsis'
 
 import { PaddingDiv, HorizontalLine, RoundBtn,  RobotoText } from '../components';
 
-const PostSummary = ({ blog, style, blackTheme }) => {
-  const { title, content, sys } = blog;
+const PostSummary = ({ blog, style, blackTheme, hideContent }) => {
+  const { fields: { title, content }, sys } = blog;
   const bgColor = blackTheme ? '#000' : '#fff';
   const btnColor = blackTheme ? '#fff' : '#1e22aa';
   const btnBgColor =  blackTheme ? '#1e22aa' : '#fff';
-
   return (
     <Container style={style}>
       <PaddingDiv bottom={20}>
@@ -27,30 +26,44 @@ const PostSummary = ({ blog, style, blackTheme }) => {
           WAY OF WORK
         </RoundBtn>
       </PaddingDiv>
-      <RobotoText color={bgColor} size="24" weight="600"> {title}
-      </RobotoText>
-      <PaddingDiv top={10} bottom={20}>
-        <HorizontalLine size={60} color={bgColor} height={3} />
-      </PaddingDiv>
-      <PaddingDiv
-        bottom={35}
-        style={{
-          minHeight: 100,
-          opacity: 0.8,
-        }}
-      >
-        <RobotoText color={bgColor} size="16" weight="300">
-          <LinesEllipsis
-            text={content}
-            maxLine={4}
-            ellipsis='...'
-            trimRight
-            basedOn='words'
-          />
+      <div style={{ minHeight: hideContent ? 120 : 0 }}>
+        <RobotoText color={bgColor} size="24" weight="600">
+          {!hideContent && title}
+          {hideContent &&
+            <LinesEllipsis
+              text={title}
+              maxLine={2}
+              ellipsis='...'
+              trimRight
+              basedOn='letters'
+            />
+          }
         </RobotoText>
-      </PaddingDiv>
+        <PaddingDiv top={10} bottom={20}>
+          <HorizontalLine size={60} color={bgColor} height={3} />
+        </PaddingDiv>
+      </div>
+      {!hideContent && (
+        <PaddingDiv
+          bottom={35}
+          style={{
+            minHeight: 100,
+            opacity: 0.8,
+          }}
+        >
+          <RobotoText color={bgColor} size="16" weight="300">
+            <LinesEllipsis
+              text={content.replace(/<[^>]+>/g, '')}
+              maxLine={4}
+              ellipsis='...'
+              trimRight
+              basedOn='words'
+            />
+          </RobotoText>
+        </PaddingDiv>
+      )}
       <PaddingDiv>
-        <RoundBtn size={16} bgColor={btnBgColor} color={btnColor} >Read more</RoundBtn>
+        <RoundBtn link={sys && `./blogs/${sys.id}`} size={16} bgColor={btnBgColor} color={btnColor} >Read more</RoundBtn>
       </PaddingDiv>
     </Container>
   )
