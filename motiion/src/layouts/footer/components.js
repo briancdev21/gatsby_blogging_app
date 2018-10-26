@@ -14,12 +14,24 @@ export const CustomLink = styled(Link)`
     padding: 10px;
     border-bottom: none;
   }
+
+  @media (max-width: 600px) {
+    margin: 0 10px;
+  }
 `;
 
-export const Wrapper = styled.header`
+export const Wrapper = styled.footer`
   height: 100px;
   width: 100%;
   background-color: #000;
+`;
+
+export const MobileFooter = styled.footer`
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
 `;
 
 export const Container = styled.div`
@@ -47,4 +59,8 @@ export const Logo = styled.img`
   padding-right: 30px;
   margin: 0;
   margin-top: 8px;
+
+  @media (max-width: 600px) {
+    padding-right: 0;
+  }
 `;
