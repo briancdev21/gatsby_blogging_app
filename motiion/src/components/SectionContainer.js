@@ -22,5 +22,6 @@ const Container = styled.div`
     width: 100%;
     flex-flow: column;
     justify-content: center;
+    padding: 10px;
   }
 `;

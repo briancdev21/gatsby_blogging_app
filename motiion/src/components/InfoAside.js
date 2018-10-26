@@ -31,7 +31,7 @@ const Main = styled.div`
   @media (max-width: 600px) {
     width: 100%;
     height: 480px;
-    padding: 70px 20px;
+    padding: 70px 30px;
     text-align: center;
   }
 
@@ -61,7 +61,7 @@ const SideBg = styled.div`
 
   @media (max-width: 500px) {
     padding: 20px;
-    top: 220px;
+    top: 250px;
   }
 
   @media (max-width: 450px) {

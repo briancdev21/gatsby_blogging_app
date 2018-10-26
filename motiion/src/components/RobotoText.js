@@ -9,17 +9,17 @@ const RobotoText = styled.div`
   line-height: 1.45em;
     
   @media only screen and (max-width: 600px) {
-    font-size: ${props => props.size * 0.9}px;
+    font-size: ${props => props.size > 20 ? props.size * 0.9 : props.size}px;
     line-height: ${props => props.size > 60 ? 1.45 : 1.35}em
   }
   
   @media only screen and (max-width: 500px) {
-    font-size: ${props => props.size * 0.85}px;
+    font-size: ${props => props.size > 20 ? props.size * 0.85 : props.size}px;
     line-height: ${props => props.size > 60 ? 1.45 : 1.45}em
   }
 
   @media only screen and (max-width: 400px) {
-    font-size: ${props => props.size * 0.8}px;
+    font-size: ${props => props.size > 20 ? props.size * 0.8 : props.size}px;
     line-height: ${props => props.size > 60 ? 1.45 : 1.6}em
   }
 

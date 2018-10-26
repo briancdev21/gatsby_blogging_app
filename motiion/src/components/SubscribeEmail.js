@@ -7,6 +7,7 @@ import { FlexContainer } from '../layouts/header/components';
 
 class SubscribeEmail extends Component {
   render() {
+    const isMobile = window.innerWidth < 600;
     return (
       <PaddingDiv top={6} bottom={6} left={6} right={6}
         style={{
@@ -15,11 +16,15 @@ class SubscribeEmail extends Component {
           width: '100%',
         }}
       >
-      <FlexContainer justifyContent="space-between">
+      <FlexContainer justifyContent="space-between"
+        style={{ flexFlow: isMobile ? 'column' : 'row'}}
+      >
         <SearchInput placeholder="Enter email" />
-          <RoundBtn size={16} color={'#fff'} bgColor={'#1e22aa'}>
-            Subscribe
-          </RoundBtn>
+        <RoundBtn size={16} color={'#fff'} bgColor={'#1e22aa'}
+          style={{ width: isMobile ? '100%' : 'auto'}}
+        >
+          Subscribe
+        </RoundBtn>
       </FlexContainer>
       </PaddingDiv>
     )
@@ -37,4 +42,9 @@ const SearchInput = styled.input`
   padding: 0 20px;
   flex: 1;
   margin-right: 10px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    margrin: 0;
+  }
 `
