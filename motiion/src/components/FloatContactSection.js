@@ -23,6 +23,20 @@ const FloatContactSection = styled.div`
       margin: 8px;
     }
   }
+
+  @media (max-width: 600px) {
+    position: static;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    height: auto;
+    width: 100%;
+    flex-flow: column;
+
+    & .side {
+      display: none;
+    }
+  }
 `
 
 export default FloatContactSection;
