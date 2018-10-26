@@ -5,6 +5,7 @@ import { SectionContainer, PaddingDiv, PlayFairText, RobotoText, MoreButton, Fle
 import { icArrowBlue, EmptyLogo } from '../images';
 
 const IndexPage = () => {
+  const isMobile = window.innerWidth < 600;
   return (
     <React.Fragment>
       <Layout
@@ -19,7 +20,7 @@ const IndexPage = () => {
             <PaddingDiv top={20} bottom={10}>
               <BackBtn url={"/"} title={'Home'} />
             </PaddingDiv>
-            <PaddingDiv top={10} bottom={40}>
+            <PaddingDiv top={10} bottom={isMobile ? 0 : 40}>
               <PlayFairText weight="900" size={72} color="#000">
                 Careers
               </PlayFairText>
@@ -67,8 +68,8 @@ const IndexPage = () => {
             </PaddingDiv>
             <PaddingDiv bottom={10} top={10}>
               <FlexContainer>
-                <FlexView size={2}>
-                  <img src={EmptyLogo} alt="Empty Logo" />
+                <FlexView size={2} hidden={isMobile}>
+                  <img src={EmptyLogo} alt="Empty Logo"  />
                 </FlexView>
                 <FlexView size={10}>
                   <RobotoText size="24" weight="600" color="#000">
@@ -82,8 +83,8 @@ const IndexPage = () => {
             </PaddingDiv>
             <PaddingDiv bottom={10} top={10}>
               <FlexContainer>
-                <FlexView size={2}>
-                  <img src={EmptyLogo} alt="Empty Logo" />
+                <FlexView size={2} hidden={isMobile} >
+                  <img src={EmptyLogo} alt="Empty Logo"/>
                 </FlexView>
                 <FlexView size={10}>
                   <RobotoText size="24" weight="600" color="#000">
@@ -97,7 +98,7 @@ const IndexPage = () => {
             </PaddingDiv>
             <PaddingDiv bottom={10} top={10}>
               <FlexContainer>
-                <FlexView size={2}>
+                <FlexView size={2} hidden={isMobile} >
                   <img src={EmptyLogo} alt="Empty Logo" />
                 </FlexView>
                 <FlexView size={10}>
@@ -112,7 +113,7 @@ const IndexPage = () => {
             </PaddingDiv>
             <PaddingDiv bottom={10} top={10}>
               <FlexContainer>
-                <FlexView size={2}>
+                <FlexView size={2} hidden={isMobile} >
                   <img src={EmptyLogo} alt="Empty Logo" />
                 </FlexView>
                 <FlexView size={10}>
@@ -128,7 +129,7 @@ const IndexPage = () => {
             </PaddingDiv>
             <PaddingDiv bottom={10} top={10}>
               <FlexContainer>
-                <FlexView size={2}>
+                <FlexView size={2} hidden={isMobile}>
                   <img src={EmptyLogo} alt="Empty Logo" />
                 </FlexView>
                 <FlexView size={10}>
@@ -143,7 +144,7 @@ const IndexPage = () => {
             </PaddingDiv>
             <PaddingDiv bottom={10} top={10}>
               <FlexContainer>
-                <FlexView size={2}>
+                <FlexView size={2} hidden={isMobile}>
                   <img src={EmptyLogo} alt="Empty Logo" />
                 </FlexView>
                 <FlexView size={10}>
