@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import { Layout } from '../layouts'
 import { SectionContainer, PaddingDiv, PlayFairText, RobotoText, MoreButton, FlexContainer, FlexView, HorizontalLine, RectButton, BackBtn } from '../components';
@@ -69,7 +68,7 @@ const IndexPage = () => {
             <PaddingDiv bottom={10} top={10}>
               <FlexContainer>
                 <FlexView size={2}>
-                  <img src={EmptyLogo} />
+                  <img src={EmptyLogo} alt="Empty Logo" />
                 </FlexView>
                 <FlexView size={10}>
                   <RobotoText size="24" weight="600" color="#000">
@@ -84,7 +83,7 @@ const IndexPage = () => {
             <PaddingDiv bottom={10} top={10}>
               <FlexContainer>
                 <FlexView size={2}>
-                  <img src={EmptyLogo} />
+                  <img src={EmptyLogo} alt="Empty Logo" />
                 </FlexView>
                 <FlexView size={10}>
                   <RobotoText size="24" weight="600" color="#000">
@@ -99,7 +98,7 @@ const IndexPage = () => {
             <PaddingDiv bottom={10} top={10}>
               <FlexContainer>
                 <FlexView size={2}>
-                  <img src={EmptyLogo} />
+                  <img src={EmptyLogo} alt="Empty Logo" />
                 </FlexView>
                 <FlexView size={10}>
                   <RobotoText size="24" weight="600" color="#000">
@@ -114,7 +113,7 @@ const IndexPage = () => {
             <PaddingDiv bottom={10} top={10}>
               <FlexContainer>
                 <FlexView size={2}>
-                  <img src={EmptyLogo} />
+                  <img src={EmptyLogo} alt="Empty Logo" />
                 </FlexView>
                 <FlexView size={10}>
                   <RobotoText size="24" weight="600" color="#000">
@@ -130,7 +129,7 @@ const IndexPage = () => {
             <PaddingDiv bottom={10} top={10}>
               <FlexContainer>
                 <FlexView size={2}>
-                  <img src={EmptyLogo} />
+                  <img src={EmptyLogo} alt="Empty Logo" />
                 </FlexView>
                 <FlexView size={10}>
                   <RobotoText size="24" weight="600" color="#000">
@@ -145,7 +144,7 @@ const IndexPage = () => {
             <PaddingDiv bottom={10} top={10}>
               <FlexContainer>
                 <FlexView size={2}>
-                  <img src={EmptyLogo} />
+                  <img src={EmptyLogo} alt="Empty Logo" />
                 </FlexView>
                 <FlexView size={10}>
                   <RobotoText size="24" weight="600" color="#000">

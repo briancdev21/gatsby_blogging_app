@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import PaddingDiv from './PaddingDiv'
-
 const BlogSide = (style) => {
   return (
     <div style={{...style}}>

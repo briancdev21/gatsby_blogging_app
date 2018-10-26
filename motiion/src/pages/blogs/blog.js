@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 import { Layout } from '../../layouts'
 import { getClient } from '../../services/ContentfulClient'
-import { SectionContainer, Tag, PaddingDiv, PlayFairText, FlexContainer, BackBtn, RobotoText, RectButton, HorizontalLine, PostSummary, Card } from '../../components';
+import { SectionContainer, Tag, PaddingDiv, PlayFairText, FlexContainer, BackBtn, RobotoText, HorizontalLine, PostSummary, Card } from '../../components';
 import * as config from '../../config'
 
 class Blog extends Component {

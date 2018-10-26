@@ -3,7 +3,7 @@ import React from 'react'
 import { Facebook, Twitter, Linkedin } from '../images'
 import { PaddingDiv, RobotoText, FlexContainer, FlexView, ProfileLogo, SocialIcon } from '../components';
 
-const Profile = ({ title, role, content, profileLink }) => {
+const Profile = ({ title, userRole, content, profileLink }) => {
   return (
     <FlexContainer alignItems="flex-start">
       <FlexView size={2}>
@@ -14,7 +14,7 @@ const Profile = ({ title, role, content, profileLink }) => {
           {title}
         </RobotoText>
         <RobotoText size={16} color={'#000'} weight={500}>
-          {role}
+          {userRole}
         </RobotoText>
         <PaddingDiv bottom={20} top={10}>
           <SocialIcon link={'#'} src={Facebook}/>

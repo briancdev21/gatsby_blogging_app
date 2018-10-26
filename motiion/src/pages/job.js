@@ -51,7 +51,7 @@ const JobPage = () => {
                   </ul>
                 </FlexView>
                 <div>
-                  <RoundBtn link={applyUrl} target="_blank" size={20} bgColor="#1e22aa" color="#fff" style={{ paddingRight: '1.5em', paddingLeft: '1.5em' }} >
+                  <RoundBtn link={applyUrl} target="_blank" rel="noopener noreferrer" size={20} bgColor="#1e22aa" color="#fff" style={{ paddingRight: '1.5em', paddingLeft: '1.5em' }} >
                     Apply for this job
                   </RoundBtn>
                 </div>
@@ -89,8 +89,8 @@ const JobPage = () => {
           <SectionContainer style={{ justifyContent: 'center' }}>
             <PaddingDiv top={50} bottom={80}>
               <FlexContainer>
-                <RoundBtn size={20} bgColor="#1e22aa" color="#fff" style={{ paddingRight: '1.5em', paddingLeft: '1.5em' }} >
-                  <a href={applyUrl} target="_blank" style={{ color: 'inherit', textDecoration: 'none' }}>Apply for this job</a>
+                <RoundBtn size={20} link={applyUrl} bgColor="#1e22aa" color="#fff" style={{ paddingRight: '1.5em', paddingLeft: '1.5em' }} >
+                  Apply for this job
                 </RoundBtn>
               </FlexContainer>
             </PaddingDiv>

@@ -69,7 +69,7 @@ class Blogs extends Component {
               <PaddingDiv top={60} bottom={40}>
                 <FlexContainer style={{ flexFlow: 'row wrap', margin: '0 -15px', justifyContent: 'flex-start' }}>
                   {blogs.map((blog, index) => (
-                    <Card key={index}>
+                    <Card key={index} style={{ minWidth: '40%' }}>
                       <PostSummary blog={blog} blackTheme />
                     </Card>
                   ))}
