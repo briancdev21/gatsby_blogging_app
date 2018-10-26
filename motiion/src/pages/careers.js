@@ -52,7 +52,7 @@ const IndexPage = () => {
               </p>
             </div>
             <PaddingDiv bottom={60}>
-              <MoreButton style={{ color: '#1e22aa', justifyContent: 'flex-start' }} href={'#opportunities'}>See opportunities <img src={icArrowBlue} alt="white arrow"/></MoreButton>
+              <MoreButton style={{ color: '#1e22aa', justifyContent: isMobile ? 'center' : 'flex-start' }} href={'#opportunities'}>See opportunities <img src={icArrowBlue} alt="white arrow"/></MoreButton>
             </PaddingDiv>
           </SectionContainer>
         </section>
@@ -67,7 +67,7 @@ const IndexPage = () => {
               Our main goals with Motiion are easy to explain: We want to build a company that we would like to enjoy spending the rest of our careers in, that has a positive impact on the world and that will outlast us. Achieving these goals will be challenging, but we know we can do it. Here’s why:
             </PaddingDiv>
             <PaddingDiv bottom={10} top={10}>
-              <FlexContainer>
+              <FlexContainer style={{ padding: 0 }}>
                 <FlexView size={2} hidden={isMobile}>
                   <img src={EmptyLogo} alt="Empty Logo"  />
                 </FlexView>
@@ -82,7 +82,7 @@ const IndexPage = () => {
               </FlexContainer>
             </PaddingDiv>
             <PaddingDiv bottom={10} top={10}>
-              <FlexContainer>
+              <FlexContainer style={{ padding: 0 }}>
                 <FlexView size={2} hidden={isMobile} >
                   <img src={EmptyLogo} alt="Empty Logo"/>
                 </FlexView>
@@ -97,7 +97,7 @@ const IndexPage = () => {
               </FlexContainer>
             </PaddingDiv>
             <PaddingDiv bottom={10} top={10}>
-              <FlexContainer>
+              <FlexContainer style={{ padding: 0 }}>
                 <FlexView size={2} hidden={isMobile} >
                   <img src={EmptyLogo} alt="Empty Logo" />
                 </FlexView>
@@ -112,7 +112,7 @@ const IndexPage = () => {
               </FlexContainer>
             </PaddingDiv>
             <PaddingDiv bottom={10} top={10}>
-              <FlexContainer>
+              <FlexContainer style={{ padding: 0 }}>
                 <FlexView size={2} hidden={isMobile} >
                   <img src={EmptyLogo} alt="Empty Logo" />
                 </FlexView>
@@ -128,7 +128,7 @@ const IndexPage = () => {
               </FlexContainer>
             </PaddingDiv>
             <PaddingDiv bottom={10} top={10}>
-              <FlexContainer>
+              <FlexContainer style={{ padding: 0 }}>
                 <FlexView size={2} hidden={isMobile}>
                   <img src={EmptyLogo} alt="Empty Logo" />
                 </FlexView>
@@ -143,7 +143,7 @@ const IndexPage = () => {
               </FlexContainer>
             </PaddingDiv>
             <PaddingDiv bottom={10} top={10}>
-              <FlexContainer>
+              <FlexContainer style={{ padding: 0 }}>
                 <FlexView size={2} hidden={isMobile}>
                   <img src={EmptyLogo} alt="Empty Logo" />
                 </FlexView>
@@ -163,13 +163,13 @@ const IndexPage = () => {
         {/*  */}
         <section style={{ background: '#F5F5F5' }} id="opportunities">
           <SectionContainer column>
-            <PaddingDiv top={70} bottom={30}>
+            <PaddingDiv top={isMobile ? 50 : 70} bottom={30}>
               <RobotoText size="24" weight="600" color="#000">
                 Open positions
               </RobotoText>
             </PaddingDiv>
-            <PaddingDiv bottom={100}>
-              <FlexContainer justifyContent="space-between" style={{ margin: '0 -15px' }}>
+            <PaddingDiv bottom={isMobile ? 70 : 100}>
+              <FlexContainer justifyContent={isMobile ? "center" : "space-between"} style={{ margin: '0 -15px' }}>
                 <RectButton link="/job">
                     <RobotoText size="24" weight="500" color="#1e22aa">
                       Product Manager
@@ -200,9 +200,18 @@ const IndexPage = () => {
               </FlexContainer>
               <PaddingDiv bottom={35} />
               <FlexContainer>
-                <RobotoText size="18" weight="400" color="#00000060">
-                  Sounds interesting? Take a look at our open positions!
-                </RobotoText>
+                {!isMobile && (
+                  <RobotoText size="18" weight="400" color="#00000060">
+                    Sounds interesting? Take a look at our open positions!
+                  </RobotoText>
+                )}
+                {isMobile && (
+                  <PaddingDiv style={{ width: 300 }}>
+                    <RobotoText size="24" weight="400" color="#000000">
+                      Sounds interesting? Take a look at our open positions!
+                    </RobotoText>
+                  </PaddingDiv>
+                )}
               </FlexContainer>
             </PaddingDiv>
           </SectionContainer>

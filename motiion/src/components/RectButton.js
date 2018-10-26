@@ -28,4 +28,8 @@ const Container = styled.a`
   &:hover {
     box-shadow: 0 4px 28px 14px rgba(0,0,0,0.12), 0px 1px 12px 1px rgba(0,0,0,0.24);
   }
+
+  @media (max-width: 600px) {
+    margin: 20px 15px;
+  }
 `
