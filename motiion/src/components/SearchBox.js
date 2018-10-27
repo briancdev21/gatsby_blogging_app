@@ -21,6 +21,10 @@ const Input = styled.input`
   font-size: 20px;
   color: #000000AA;
   padding: 6px 60px 6px 25px;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `
 
 const Container = styled.div`
@@ -28,6 +32,11 @@ const Container = styled.div`
   position: relative;
   top: 0;
   left: 0;
+
+  @media (max-width: 600px) {
+    width: 38px;
+    height: 38px;
+  }
 `
 
 const Img = styled.img`
@@ -35,6 +44,15 @@ const Img = styled.img`
   top: 13px;
   right: 15px;
   width: 30px;
+  cursor: pointer;
+
+  @media (max-width: 600px) {
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+  }
 `
 
 export default SearchBox;

@@ -40,6 +40,7 @@ class Blogs extends Component {
   
   render() {
     const { blogs } = this.state;
+    const isMobile = window.innerWidth < 600;
     return (
       <React.Fragment>
         <Layout
@@ -79,7 +80,7 @@ class Blogs extends Component {
                 <BlogLoadMoreBtn moreLoadHander={this.moreLoadHander} />
               </FlexContainer>
             </SectionContainer>
-            <PaddingDiv bottom={300} />
+            <PaddingDiv bottom={isMobile ? 100 : 300} />
           </section>
         </Layout>
       </React.Fragment>
