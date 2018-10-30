@@ -31,5 +31,7 @@ const Container = styled.a`
 
   @media (max-width: 600px) {
     margin: 20px 15px;
+    width: calc(100vw - 50px);
+    height: calc(100vw - 50px);
   }
 `

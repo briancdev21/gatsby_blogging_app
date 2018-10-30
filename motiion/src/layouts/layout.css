@@ -29,3 +29,14 @@ li {
 .featurelist b {
   margin-left: -5px;
 }
+
+
+@media (max-width: 600px) {
+  .featurelist li {
+    margin-left: 25px;
+    list-style: none;
+    line-height: 1.5em;
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+}

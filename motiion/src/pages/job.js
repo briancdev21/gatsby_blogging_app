@@ -22,6 +22,7 @@ const data = {
 
 const JobPage = () => {
   const { text: title, categories, applyUrl, description, lists } = data;
+  const isMobile = window.innerWidth < 600;
   return (
     <React.Fragment>
       <Layout
@@ -41,8 +42,8 @@ const JobPage = () => {
                 {title}
               </PlayFairText>
             </PaddingDiv>
-            <PaddingDiv top={0} bottom={30}>
-              <FlexContainer>
+            <PaddingDiv top={0} bottom={isMobile ? 60 : 30}>
+              <FlexContainer style={{ padding: 0 }}>
                 <FlexView size={1}>
                   <ul>
                     <li><RobotoText size={18} weight={500} >{categories.location || ''}</RobotoText></li>
@@ -50,8 +51,8 @@ const JobPage = () => {
                     <li><RobotoText size={18} weight={500} >{categories.commitment || ''}</RobotoText></li>
                   </ul>
                 </FlexView>
-                <div>
-                  <RoundBtn link={applyUrl} target="_blank" rel="noopener noreferrer" size={20} bgColor="#1e22aa" color="#fff" style={{ paddingRight: '1.5em', paddingLeft: '1.5em' }} >
+                <div style={{ width: isMobile ? '100%' : 'auto'}}>
+                  <RoundBtn link={applyUrl} target="_blank" rel="noopener noreferrer" size={20} bgColor="#1e22aa" color="#fff" style={{ paddingRight: '1.5em', paddingLeft: '1.5em', width: isMobile ? '100%' : 'auto' }} >
                     Apply for this job
                   </RoundBtn>
                 </div>
@@ -87,9 +88,9 @@ const JobPage = () => {
         ))}
         <section style={{ backgroundColor: '#f5f5f5' }}>
           <SectionContainer style={{ justifyContent: 'center' }}>
-            <PaddingDiv top={50} bottom={80}>
+            <PaddingDiv top={isMobile ? 0 : 50} bottom={isMobile ? 50 :80} style={{ width: isMobile ? '100%' : 'auto' }}>
               <FlexContainer>
-                <RoundBtn size={20} link={applyUrl} bgColor="#1e22aa" color="#fff" style={{ paddingRight: '1.5em', paddingLeft: '1.5em' }} >
+                <RoundBtn size={20} link={applyUrl} bgColor="#1e22aa" color="#fff" style={{ paddingRight: '1.5em', paddingLeft: '1.5em', width: isMobile ? '100%' : 'auto' }} >
                   Apply for this job
                 </RoundBtn>
               </FlexContainer>
@@ -105,7 +106,7 @@ const JobPage = () => {
               </RobotoText>
             </PaddingDiv>
             <PaddingDiv bottom={100}>
-              <FlexContainer justifyContent="flex-start" style={{ margin: '0 -15px' }}>
+              <FlexContainer justifyContent={isMobile ? "center" : "flex-start"} style={{ margin: '0 -15px' }}>
                 <RectButton>
                   <RobotoText size="24" weight="500" color="#1e22aa">
                     Software Engineer
