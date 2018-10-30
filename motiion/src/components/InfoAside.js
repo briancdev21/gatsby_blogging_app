@@ -43,10 +43,14 @@ const Main = styled.div`
 const SideBg = styled.div`
   position: absolute;
   top: 500px;
-  left: -12px;
-  width: 300px;
+  left: -10px;
+  width: 330px;
   height: 200px;
-  background: #d8d8d8;
+  
+  & img {
+    width: 100%;
+  }
+
   @media (max-width: 600px) {
     top: 220px;
     width: 100%;

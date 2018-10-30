@@ -5,10 +5,13 @@ export const FirstWeEatSideBg = styled.div`
   margin: 110px 0;
   height: 440px;
   width: 512px;
-  background-color: #d8d8d8;
   z-index: 9;
   right: 0;
   top: 0;
+
+  img {
+    width: 100%;
+  }
 
   @media only screen and (max-width: 600px) {
     display: none;

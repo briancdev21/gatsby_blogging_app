@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { Layout } from '../layouts'
 import { FirstWeEatMain, FirstWeEatSideBg, InfoDetail } from '../styles';
 import { SectionContainer, PaddingDiv, HorizontalLine, RoundBtn, PlayFairText, RobotoText, InfoAside, BlogSide, MoreButton, PostSummary, FloatContactSection, FlexContainer, FlexView, SubscribeEmail, Profile } from '../components';
-import { icArrowWhite, ProfilePhotoAre, ProfilePhotoDag, ProfilePhotoMaren } from '../images';
+import { icArrowWhite, ProfilePhotoAre, ProfilePhotoDag, ProfilePhotoMaren, homeIllustration } from '../images';
 import * as config from '../config'
 import { getClient } from '../services/ContentfulClient'
 
@@ -57,7 +57,9 @@ class IndexPage extends Component {
                   <RoundBtn size={20} bgColor="#1e22aa" color="#fff" link="/careers">Learn more</RoundBtn>
                 </PaddingDiv>
               </FirstWeEatMain>
-              <FirstWeEatSideBg />
+              <FirstWeEatSideBg>
+                <img src={homeIllustration} alt="home illustration" />
+              </FirstWeEatSideBg>
             </SectionContainer>
           </section>
           {/* 'Our Technologies ...' Section */}
@@ -67,7 +69,7 @@ class IndexPage extends Component {
                 <PlayFairText size="48" weight="900" color="#fff">
                   Our technology supports the global food industry
                 </PlayFairText>
-                <HorizontalLine size={60} color="#fff" height={4} style={{ display: isMobile ? 'none' : 'block'}} />
+                <HorizontalLine size={60} color="#fff" height={4} style={{ display: isMobile ? 'none' : 'inline-block'}} />
               </InfoAside>
               <InfoDetail>
                 <HorizontalLine size={6000} color="#1e22aa" height={2} style={{ display: isMobile ? 'none' : 'block'}} />

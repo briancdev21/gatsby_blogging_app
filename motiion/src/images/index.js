@@ -18,3 +18,4 @@ export { default as ProfilePhotoDag } from './profile_photo-dag.png';
 export { default as ProfilePhotoMaren } from './profile_photo-maren.png';
 export { default as EmptyLogo } from './empty-logo.png';
 export { default as imgIllustration } from './img_illustration_2.png';
+export { default as homeIllustration } from './img_illustration_1.png';
