@@ -36,8 +36,24 @@ export const InfoDetail = styled.div`
   & > p {
     margin-top: 50px;
   }
-
+  
   @media only screen and (max-width: 600px) {
+    width: 100%;
+    padding: 200px 10px 60px 10px;
+  }
+  @media only screen and (max-width: 550px) {
+    width: 100%;
+    padding: 180px 10px 60px 10px;
+  }
+  @media only screen and (max-width: 450px) {
+    width: 100%;
+    padding: 180px 10px 60px 10px;
+  }
+  @media only screen and (max-width: 420px) {
+    width: 100%;
+    padding: 150px 10px 60px 10px;
+  }
+  @media only screen and (max-width: 400px) {
     width: 100%;
     padding: 120px 10px 60px 10px;
   }

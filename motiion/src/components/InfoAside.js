@@ -57,10 +57,15 @@ const SideBg = styled.div`
     & img {
       width: 100%;
     }
+  }  
+  
+  @media (max-width: 600px) {
+    padding: 0 25px;
+    top: 250px;
   }
 
   @media (max-width: 500px) {
-    padding: 20px;
+    padding: 0 20px;
     top: 250px;
   }
 

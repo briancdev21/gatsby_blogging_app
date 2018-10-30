@@ -15,12 +15,12 @@ const PlayFairText = styled.div`
   
   @media only screen and (max-width: 500px) {
     font-size: ${props => props.size * 0.85}px;
-    line-height: ${props => props.size > 60 ? 1.45 : 1.45}em
+    line-height: ${props => props.size > 60 ? 1.45 : 1.4}em
   }
 
   @media only screen and (max-width: 400px) {
     font-size: ${props => props.size * 0.8}px;
-    line-height: ${props => props.size > 60 ? 1.45 : 1.6}em
+    line-height: ${props => props.size > 60 ? 1.45 : 1.5}em
   }
 `;
 

@@ -17,6 +17,7 @@ const Round = styled.div`
   color: #000;
   display: inline-block;
   margin-right: 10px;
+  margin-bottom: 8px;
   text-transform: capitalize;
   opacity: 0.8;
 `
