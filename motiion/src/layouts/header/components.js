@@ -25,6 +25,14 @@ export const CustomLink = styled(Link)`
 
   @media (max-width: 600px) {
     font-size: 28px;
+    
+    &.active {
+      opacity: 1;
+  
+      span {
+        border-bottom: none;
+      }
+    }
   }
 `;
 
