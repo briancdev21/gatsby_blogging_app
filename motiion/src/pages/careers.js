@@ -199,7 +199,7 @@ class CareersPage extends Component {
               <PaddingDiv bottom={isMobile ? 70 : 100}>
                 <FlexContainer justifyContent={isMobile ? "center" : "space-between"} style={{ margin: '0 -15px' }}>
                   {opportunities && opportunities.map((opportunity, index) => (
-                    <RectButton link={`/job/${opportunity.id}`} key={index}>
+                    <RectButton link={`/jobs/${opportunity.id}`} key={index}>
                       <PaddingDiv right={30} left={30}>
                         <RobotoText size="24" weight="500" color="#1e22aa">
                           {opportunity.text}

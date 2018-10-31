@@ -24,7 +24,7 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-create-client-paths`,
-      options: { prefixes: [`/blogs/*`] },
+      options: { prefixes: [`/blogs/*`, `/jobs/*`] },
     },
     'gatsby-plugin-offline',
   ],
