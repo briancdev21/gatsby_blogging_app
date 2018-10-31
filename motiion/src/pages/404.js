@@ -1,10 +1,16 @@
 import React from 'react'
 import { Layout } from '../layouts'
+import { SectionContainer, PaddingDiv } from '../components';
 
 const NotFoundPage = () => (
   <Layout>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <section style={{ height: 'calc(100vh - 160px)' }}>
+      <SectionContainer>
+        <PaddingDiv top={100}>
+          <h1>404 - Not Found</h1>
+        </PaddingDiv>
+      </SectionContainer>
+    </section> 
   </Layout>
 )
 
