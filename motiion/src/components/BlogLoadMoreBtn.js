@@ -14,7 +14,7 @@ const BlogLoadMoreBtn = ({ moreLoadHander }) => {
 
 const Container = styled.div`
   display: inline-block;
-  color: #1e22aa;
+  color: #013EBF;
   background-color: #fff;
   padding: 10px 40px 10px 30px;
   font-size: 14px;

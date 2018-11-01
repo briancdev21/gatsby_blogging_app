@@ -39,7 +39,7 @@ export const CustomLink = styled(Link)`
 export const HeaderWrapper = styled.header`
   height: 60px;
   width: 100%;
-  background-color: #1E22AA;
+  background-color: #1168DB;
   position: fixed;
   top: 0;
   left: 0;

@@ -54,7 +54,7 @@ class IndexPage extends Component {
                   <HorizontalLine size={60} height={3} />
                 </PaddingDiv>
                 <PaddingDiv>
-                  <RoundBtn size={20} bgColor="#1e22aa" color="#fff" link="/careers">Learn more</RoundBtn>
+                  <RoundBtn size={20} bgColor="#013ebf" color="#fff" link="/careers">Learn more</RoundBtn>
                 </PaddingDiv>
               </FirstWeEatMain>
               <FirstWeEatSideBg>

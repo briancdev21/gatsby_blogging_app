@@ -6,7 +6,7 @@ const FloatContactSection = styled.div`
   width: 1280px;
   left: calc(50vw - 1280px / 2);
   height: 220px;
-  background: #1e22aa;
+  background: #1168DB;
   border-radius: 5px;
   display: flex;
   box-shadow: 0 15px 100px rgba(2, 2, 2, 0.8);

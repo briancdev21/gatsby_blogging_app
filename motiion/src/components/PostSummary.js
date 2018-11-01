@@ -7,8 +7,8 @@ import { PaddingDiv, HorizontalLine, RoundBtn,  RobotoText } from '../components
 const PostSummary = ({ blog, style, blackTheme, hideContent }) => {
   const { fields: { title, content }, sys } = blog;
   const bgColor = blackTheme ? '#000' : '#fff';
-  const btnColor = blackTheme ? '#fff' : '#1e22aa';
-  const btnBgColor =  blackTheme ? '#1e22aa' : '#fff';
+  const btnColor = blackTheme ? '#fff' : '#013ebf';
+  const btnBgColor =  blackTheme ? '#013ebf' : '#fff';
   return (
     <Container style={style}>
       <PaddingDiv bottom={20}>

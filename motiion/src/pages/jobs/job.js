@@ -101,7 +101,7 @@ class JobPage extends React.Component {
                     </ul>
                   </FlexView>
                   <div style={{ width: isMobile ? '100%' : 'auto'}}>
-                    <RoundBtn link={applyUrl} target="_blank" rel="noopener noreferrer" size={20} bgColor="#1e22aa" color="#fff" style={{ paddingRight: '1.5em', paddingLeft: '1.5em', width: isMobile ? '100%' : 'auto' }} >
+                    <RoundBtn link={applyUrl} target="_blank" rel="noopener noreferrer" size={20} bgColor="#013EBF" color="#fff" style={{ paddingRight: '1.5em', paddingLeft: '1.5em', width: isMobile ? '100%' : 'auto' }} >
                       Apply for this job
                     </RoundBtn>
                   </div>
@@ -139,7 +139,7 @@ class JobPage extends React.Component {
             <SectionContainer style={{ justifyContent: 'center' }}>
               <PaddingDiv top={isMobile ? 0 : 50} bottom={isMobile ? 50 :80} style={{ width: isMobile ? '100%' : 'auto' }}>
                 <FlexContainer>
-                  <RoundBtn size={20} link={applyUrl} bgColor="#1e22aa" color="#fff" style={{ paddingRight: '1.5em', paddingLeft: '1.5em', width: isMobile ? '100%' : 'auto' }} >
+                  <RoundBtn size={20} link={applyUrl} bgColor="#013EBF" color="#fff" style={{ paddingRight: '1.5em', paddingLeft: '1.5em', width: isMobile ? '100%' : 'auto' }} >
                     Apply for this job
                   </RoundBtn>
                 </FlexContainer>
@@ -159,7 +159,7 @@ class JobPage extends React.Component {
                   {relatedJobs && relatedJobs.map((opportunity, index) => (
                     <RectButton link={`/jobs/${opportunity.id}`} key={index}>
                       <PaddingDiv right={30} left={30}>
-                        <RobotoText size="24" weight="500" color="#1e22aa">
+                        <RobotoText size="24" weight="500" color="#013EBF">
                           {opportunity.text}
                         </RobotoText>
                       </PaddingDiv>

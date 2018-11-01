@@ -20,7 +20,7 @@ class SubscribeEmail extends Component {
         style={{ flexFlow: isMobile ? 'column' : 'row'}}
       >
         <SearchInput placeholder="Enter email" />
-        <RoundBtn size={16} color={'#fff'} bgColor={'#1e22aa'}
+        <RoundBtn size={16} color={'#fff'} bgColor={'#013ebf'}
           style={{ width: isMobile ? '100%' : 'auto'}}
         >
           Subscribe
