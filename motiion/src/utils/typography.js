@@ -1,13 +1,13 @@
-import Typography from "typography"
+import Typography from 'typography'
 
 const typography = new Typography({
-  baseFontSize: "16px",
+  baseFontSize: '16px',
   baseLineHeight: 1.45,
   headerFontFamily: [
-    "Roboto",
-    "sans-serif",
+    'Roboto',
+    'sans-serif',
   ],
-  bodyFontFamily: ["Roboto", "sans-serif"],
+  bodyFontFamily: ['Roboto', 'sans-serif'],
 })
 
 export default typography

@@ -1,39 +1,50 @@
 import React, { Component } from 'react'
 
 import { Layout } from '../layouts'
-import { SectionContainer, PaddingDiv, PlayFairText, RobotoText, MoreButton, FlexContainer, FlexView, HorizontalLine, RectButton, BackBtn } from '../components';
-import { icArrowBlue, EmptyLogo } from '../images';
+import {
+  SectionContainer,
+  PaddingDiv,
+  PlayFairText,
+  RobotoText,
+  MoreButton,
+  FlexContainer,
+  FlexView,
+  HorizontalLine,
+  RectButton,
+  BackBtn
+} from '../components'
+import { icArrowBlue, EmptyLogo } from '../images'
 
 class CareersPage extends Component {
   state = {
     opportunities: []
   }
 
-  componentDidMount() {
-    this.mounted = true;
-    this.loadJobs();
+  componentDidMount () {
+    this.mounted = true
+    this.loadJobs()
   }
 
-  componentWillUnmount(){
-    this.mounted = false;
+  componentWillUnmount () {
+    this.mounted = false
   }
 
   loadJobs = () => {
     fetch('https://api.lever.co/v0/postings/motiion?skip=0&limit=3&mode=json')
-    .then(results=>{
-      return results.json();
-    })
-    .then(data=>{
-      if(this.mounted) {
-        this.setState({opportunities: data})
-      }
-    })
+      .then(results => {
+        return results.json()
+      })
+      .then(data => {
+        if (this.mounted) {
+          this.setState({ opportunities: data })
+        }
+      })
   }
-
-  render() {
-    const isMobile = window.innerWidth < 600;
-    const { opportunities } = this.state;
-    console.log('opportunities', opportunities);
+  /* eslint-disable max-len */
+  render () {
+    const isMobile = window.innerWidth < 600
+    const { opportunities } = this.state
+    console.log('opportunities', opportunities)
     return (
       <React.Fragment>
         <Layout
@@ -46,7 +57,7 @@ class CareersPage extends Component {
           <section>
             <SectionContainer column>
               <PaddingDiv top={20} bottom={10}>
-                <BackBtn url={"/"} title={'Home'} />
+                <BackBtn url={'/'} title={'Home'} />
               </PaddingDiv>
               <PaddingDiv top={10} bottom={isMobile ? 0 : 40}>
                 <PlayFairText weight="900" size={72} color="#000">
@@ -97,7 +108,7 @@ class CareersPage extends Component {
               <PaddingDiv bottom={10} top={10}>
                 <FlexContainer style={{ padding: 0 }}>
                   <FlexView size={2} hidden={isMobile}>
-                    <img src={EmptyLogo} alt="Empty Logo"  />
+                    <img src={EmptyLogo} alt="Empty Logo" />
                   </FlexView>
                   <FlexView size={10}>
                     <RobotoText size="24" weight="600" color="#000">
@@ -197,9 +208,9 @@ class CareersPage extends Component {
                 </RobotoText>
               </PaddingDiv>
               <PaddingDiv bottom={isMobile ? 70 : 100}>
-                <FlexContainer justifyContent={isMobile ? "center" : "space-between"} style={{ margin: '0 -15px' }}>
+                <FlexContainer justifyContent={isMobile ? 'center' : 'space-between'} style={{ margin: '0 -15px' }}>
                   {opportunities && opportunities.map((opportunity, index) => (
-                    <RectButton link={`/jobs/${opportunity.id}`} key={index}>
+                    <RectButton link={`/jobs/${ opportunity.id }`} key={index}>
                       <PaddingDiv right={30} left={30}>
                         <RobotoText size="24" weight="500" color="#013ebf">
                           {opportunity.text}

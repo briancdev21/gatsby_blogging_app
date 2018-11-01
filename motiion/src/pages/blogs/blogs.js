@@ -3,7 +3,17 @@ import React, { Component } from 'react'
 
 import { Layout } from '../../layouts'
 import { getClient } from '../../services/ContentfulClient'
-import { SectionContainer, PaddingDiv, PlayFairText, SearchBox, FlexContainer, BackBtn, PostSummary, Card, BlogLoadMoreBtn } from '../../components';
+import {
+  SectionContainer,
+  PaddingDiv,
+  PlayFairText,
+  SearchBox,
+  FlexContainer,
+  BackBtn,
+  PostSummary,
+  Card,
+  BlogLoadMoreBtn
+} from '../../components'
 import * as config from '../../config'
 
 class Blogs extends Component {
@@ -12,35 +22,35 @@ class Blogs extends Component {
     skip: 0,
   }
 
-  componentDidMount() {
-    this.loadEntries();
+  componentDidMount () {
+    this.loadEntries()
   }
 
   loadEntries = async () => {
-    const { skip, blogs } = this.state;
-    const { space, accessToken } = config.contentful;
-    const client = getClient(space, accessToken);
+    const { skip, blogs } = this.state
+    const { space, accessToken } = config.contentful
+    const client = getClient(space, accessToken)
     const entriesResponse = await client.getEntries({
       content_type: 'blogPost',
       skip: skip,
       limit: 2,
       order: 'sys.createdAt'
-    });
-    const newBlogs = entriesResponse.items;
-    this.setState({ blogs: blogs.concat(newBlogs), skip: skip + 2 });
+    })
+    const newBlogs = entriesResponse.items
+    this.setState({ blogs: blogs.concat(newBlogs), skip: skip + 2 })
   }
 
   moreLoadHander = () => {
-    this.loadEntries();
+    this.loadEntries()
   }
 
   moreReadHandler = () => {
 
   }
-  
-  render() {
-    const { blogs } = this.state;
-    const isMobile = window.innerWidth < 600;
+
+  render () {
+    const { blogs } = this.state
+    const isMobile = window.innerWidth < 600
     return (
       <React.Fragment>
         <Layout
@@ -53,7 +63,7 @@ class Blogs extends Component {
           <section>
             <SectionContainer column>
               <PaddingDiv top={20} bottom={10}>
-                <BackBtn url={"/"} title={'Home'} />
+                <BackBtn url={'/'} title={'Home'} />
               </PaddingDiv>
               <PaddingDiv top={10} bottom={40}>
                 <FlexContainer justifyContent="space-between">

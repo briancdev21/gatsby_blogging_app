@@ -1,6 +1,6 @@
 import React from 'react'
 import { Layout } from '../layouts'
-import { SectionContainer, PaddingDiv } from '../components';
+import { SectionContainer, PaddingDiv } from '../components'
 
 const NotFoundPage = () => (
   <Layout>
@@ -10,7 +10,7 @@ const NotFoundPage = () => (
           <h1>404 - Not Found</h1>
         </PaddingDiv>
       </SectionContainer>
-    </section> 
+    </section>
   </Layout>
 )
 

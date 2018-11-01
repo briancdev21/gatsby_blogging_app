@@ -1,9 +1,31 @@
 import React, { Component } from 'react'
 
 import { Layout } from '../layouts'
-import { FirstWeEatMain, FirstWeEatSideBg, InfoDetail } from '../styles';
-import { SectionContainer, PaddingDiv, HorizontalLine, RoundBtn, PlayFairText, RobotoText, InfoAside, BlogSide, MoreButton, PostSummary, FloatContactSection, FlexContainer, FlexView, SubscribeEmail, Profile } from '../components';
-import { icArrowWhite, ProfilePhotoAre, ProfilePhotoDag, ProfilePhotoMaren, homeIllustration } from '../images';
+import { FirstWeEatMain, FirstWeEatSideBg, InfoDetail } from '../styles'
+import {
+  SectionContainer,
+  PaddingDiv,
+  HorizontalLine,
+  RoundBtn,
+  PlayFairText,
+  RobotoText,
+  InfoAside,
+  BlogSide,
+  MoreButton,
+  PostSummary,
+  FloatContactSection,
+  FlexContainer,
+  FlexView,
+  SubscribeEmail,
+  Profile
+} from '../components'
+import {
+  icArrowWhite,
+  ProfilePhotoAre,
+  ProfilePhotoDag,
+  ProfilePhotoMaren,
+  homeIllustration
+} from '../images'
 import * as config from '../config'
 import { getClient } from '../services/ContentfulClient'
 
@@ -13,27 +35,27 @@ class IndexPage extends Component {
     skip: 0,
   }
 
-  componentDidMount() {
-    this.loadEntries();
+  componentDidMount () {
+    this.loadEntries()
   }
 
   loadEntries = async () => {
-    const { skip, blogs } = this.state;
-    const { space, accessToken } = config.contentful;
-    const client = getClient(space, accessToken);
+    const { skip, blogs } = this.state
+    const { space, accessToken } = config.contentful
+    const client = getClient(space, accessToken)
     const entriesResponse = await client.getEntries({
       content_type: 'blogPost',
       skip: skip,
       limit: 2,
       order: 'sys.createdAt'
-    });
-    const newBlogs = entriesResponse.items;
-    this.setState({ blogs: blogs.concat(newBlogs), skip: skip + 2 });
+    })
+    const newBlogs = entriesResponse.items
+    this.setState({ blogs: blogs.concat(newBlogs), skip: skip + 2 })
   }
-
-  render() {
-    const { blogs } = this.state;
-    const isMobile = window.innerWidth < 600;
+  /* eslint-disable max-len */
+  render () {
+    const { blogs } = this.state
+    const isMobile = window.innerWidth < 600
     return (
       <React.Fragment>
         <Layout
@@ -44,7 +66,10 @@ class IndexPage extends Component {
           ]}
         >
           <section>
-            <SectionContainer alignItems="center" style={{ minHeight: isMobile ? 520 : 660 }} >
+            <SectionContainer
+              alignItems="center"
+              style={{ minHeight: isMobile ? 520 : 660 }}
+            >
               <FirstWeEatMain>
                 <PaddingDiv>
                   <PlayFairText size="72" weight="900" >First we eat</PlayFairText>
@@ -54,7 +79,14 @@ class IndexPage extends Component {
                   <HorizontalLine size={60} height={3} />
                 </PaddingDiv>
                 <PaddingDiv>
-                  <RoundBtn size={20} bgColor="#013ebf" color="#fff" link="/careers">Learn more</RoundBtn>
+                  <RoundBtn
+                    size={20}
+                    bgColor="#013ebf"
+                    color="#fff"
+                    link="/careers"
+                  >
+                    Learn more
+                  </RoundBtn>
                 </PaddingDiv>
               </FirstWeEatMain>
               <FirstWeEatSideBg>
@@ -64,15 +96,25 @@ class IndexPage extends Component {
           </section>
           {/* 'Our Technologies ...' Section */}
           <section style={{ background: '#f5f5f5', overflow: 'hidden' }}>
-            <SectionContainer style={{padding: 0}}>
+            <SectionContainer style={{ padding: 0 }}>
               <InfoAside width={isMobile ? '100%' : 320}>
                 <PlayFairText size="48" weight="900" color="#fff">
                   Our technology supports the global food industry
                 </PlayFairText>
-                <HorizontalLine size={60} color="#fff" height={4} style={{ display: isMobile ? 'none' : 'inline-block'}} />
+                <HorizontalLine
+                  size={60}
+                  color="#fff"
+                  height={4}
+                  style={{ display: isMobile ? 'none' : 'inline-block' }}
+                />
               </InfoAside>
               <InfoDetail>
-                <HorizontalLine size={6000} color="#1e22aa" height={2} style={{ display: isMobile ? 'none' : 'block'}} />
+                <HorizontalLine
+                  size={6000}
+                  color="#1e22aa"
+                  height={2}
+                  style={{ display: isMobile ? 'none' : 'block' }}
+                />
                 <p>
                   We’ re a global technology team developing solutions to support the global food industry.The Motiion Platform supports information flows within and across companies in the food value chain, enabling players in the industry to focus on their own specific tools and systems.
                 </p>
@@ -91,15 +133,21 @@ class IndexPage extends Component {
             </SectionContainer>
           </section>
           {/* 'What are we up to' Blog Section */}
-          <section style={{ background: '#111', height: isMobile ? 'auto' : 810, position: 'relative' }}>
-            <SectionContainer style={{ textAlign: 'center', display: 'block'}}>
+          <section
+            style={{ background: '#111', height: isMobile ? 'auto' : 810, position: 'relative' }}
+          >
+            <SectionContainer style={{ textAlign: 'center', display: 'block' }}>
               <PaddingDiv top={80} bottom={20}>
-                <PlayFairText size={isMobile ? 40 : 60} weight="900" color="#fff">
+                <PlayFairText
+                  size={isMobile ? 40 : 60}
+                  weight="900"
+                  color="#fff"
+                >
                   {!isMobile && (
                     <PaddingDiv left={10} right={10}>
                       What are we up to?
                     </PaddingDiv>
-                  )}              
+                  )}
                   {isMobile && (
                     <PaddingDiv left={50} right={50}>
                       What are we up to?
@@ -107,10 +155,10 @@ class IndexPage extends Component {
                   )}
                 </PlayFairText>
                 <PaddingDiv top={20} bottom={20}>
-                  <MoreButton href={"/blogs"}>More blogs <img src={icArrowWhite} alt="white arrow"/></MoreButton>
+                  <MoreButton href={'/blogs'}>More blogs <img src={icArrowWhite} alt="white arrow"/></MoreButton>
                 </PaddingDiv>
                 <PaddingDiv top={40}>
-                  <div style={{display: 'flex', flexFlow: 'row wrap', margin: isMobile ? 0 : '0 -15px' }}>
+                  <div style={{ display: 'flex', flexFlow: 'row wrap', margin: isMobile ? 0 : '0 -15px' }}>
                     {blogs.map((blog, index) => (
                       <FlexView key={index} size={1} style={{ margin: 15 }}>
                         <PostSummary blog={blog} />
@@ -123,7 +171,7 @@ class IndexPage extends Component {
             <BlogSide isMobile={isMobile} />
           </section>
           {/* Contact Section */}
-          <section style={{position: 'relative'}}>
+          <section style={{ position: 'relative' }}>
             <FloatContactSection>
               <div className="side">
                 <HorizontalLine size={60} color="#fff" height={1} />
@@ -133,7 +181,7 @@ class IndexPage extends Component {
               {isMobile && (
                 <PaddingDiv top={40} />
               )}
-              <SectionContainer style={{minHeight: 0, height: '100%'}}>
+              <SectionContainer style={{ minHeight: 0, height: '100%' }}>
                 <FlexView size={5}
                   style={{ padding: isMobile ? '50px 0' : 0 }}
                 >
@@ -171,9 +219,17 @@ class IndexPage extends Component {
 
           {/* Personal Info Section */}
           <section style={{ background: '' }}>
-            <PaddingDiv top={isMobile ? 100 : 220} bottom={140} style={{ width: isMobile ? '100%' : 1280, margin: 'auto' }}>
+            <PaddingDiv
+              top={isMobile ? 100 : 220}
+              bottom={140}
+              style={{ width: isMobile ? '100%' : 1280, margin: 'auto' }}
+            >
               <FlexContainer>
-                <HorizontalLine color={'#1e22aa'} size={isMobile ? 30 : 260} height={1} />
+                <HorizontalLine
+                  color={'#1e22aa'}
+                  size={isMobile ? 30 : 260}
+                  height={1}
+                />
                 <FlexView size={1} style={{ textAlign: 'center' }}>
                   <PlayFairText size={isMobile ? 45 : 60} weight={900} color={'#000'}>
                     We have built large scale technology companies
@@ -183,11 +239,11 @@ class IndexPage extends Component {
               </FlexContainer>
             </PaddingDiv>
             <SectionContainer style={{ flexDirection: 'column' }}>
-              <Profile 
+              <Profile
                 title="Are Traasdahl"
                 userRole="FOUNDER / CEO"
                 profileLink={ProfilePhotoAre}
-                content={"<p>Are has more than 20 years’ experience in mobile and digital content. He was the Founder & CEO of Tapad Inc. In 2016, Telenor Group acquired Tapad for $360M, making it the fifth largest venture-backed M&A exit in New York since 2009.</p><p>Traasdahl is a frequent contributor for outlets such as CNBC and Bloomberg News, and he has been featured in Forbes, the Wall Street Journal, Ad Age and other major news outlets. He was named Global Startup Awards’ Founder of the Year in 2016 and EY Entrepreneur of the Year in 2014. Prior to Tapad, he founded Thumbplay, a mobile entertainment service that he grew to more than $100MM in revenues in less than 3 years before he exited the company (the company, later acquired by Clear Channel, is now called iHeartRadio).</p>"
+                content={'<p>Are has more than 20 years’ experience in mobile and digital content. He was the Founder & CEO of Tapad Inc. In 2016, Telenor Group acquired Tapad for $360M, making it the fifth largest venture-backed M&A exit in New York since 2009.</p><p>Traasdahl is a frequent contributor for outlets such as CNBC and Bloomberg News, and he has been featured in Forbes, the Wall Street Journal, Ad Age and other major news outlets. He was named Global Startup Awards’ Founder of the Year in 2016 and EY Entrepreneur of the Year in 2014. Prior to Tapad, he founded Thumbplay, a mobile entertainment service that he grew to more than $100MM in revenues in less than 3 years before he exited the company (the company, later acquired by Clear Channel, is now called iHeartRadio).</p>'
                 }
               />
               <Profile
