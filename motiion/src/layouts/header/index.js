@@ -1,21 +1,34 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
 
-import { HamburgerIcon, MobileWrapper, CloseLink, MobileMenuPanel, MobileContainer, HeaderWrapper, Logo, Links, Container, FlexContainer, Icon, CustomLink } from './components'
+import {
+  HamburgerIcon,
+  MobileWrapper,
+  CloseLink,
+  MobileMenuPanel,
+  MobileContainer,
+  HeaderWrapper,
+  Logo,
+  Links,
+  Container,
+  FlexContainer,
+  Icon,
+  CustomLink,
+  PaddingDiv
+} from './components'
 import { icMenu, icClose, LogoPng, FacebookWhite, TwitterWhite, LinkedinWhite } from '../../images'
-import { PaddingDiv } from '../../components'
 
 class Header extends Component {
   state = {
     showMobilePanel: false,
   }
 
-  showMobilePanel = (status) => {
-    this.setState({ showMobilePanel: status });
+  showMobilePanel = status => {
+    this.setState({ showMobilePanel: status })
   }
 
-  render() {
-    const { showMobilePanel } = this.state;
+  render () {
+    const { showMobilePanel } = this.state
     return (
       <React.Fragment>
         <HeaderWrapper>
@@ -51,17 +64,17 @@ class Header extends Component {
               <PaddingDiv top={35} bottom={25}>
                 <CustomLink to="/careers" activeClassName="active"><span>Careers</span></CustomLink>
               </PaddingDiv>
-              <PaddingDiv top={35} bottom={25}>  
+              <PaddingDiv top={35} bottom={25}>
                 <CustomLink to="/blogs" activeClassName="active"><span>Blogs</span></CustomLink>
               </PaddingDiv>
 
-              <PaddingDiv top={50} bottom={15} style={{ margin: '0 5px' }}>  
+              <PaddingDiv top={50} bottom={15} style={{ margin: '0 5px' }}>
                 <Links>
                   <Icon src={FacebookWhite} ></Icon>
                   <Icon src={TwitterWhite} ></Icon>
                   <Icon src={LinkedinWhite} ></Icon>
                 </Links>
-              </PaddingDiv>  
+              </PaddingDiv>
 
             </MobileMenuPanel>
           </MobileWrapper>

@@ -21,7 +21,7 @@ const Layout = ({ children, meta, pageTitle }) => (
     render={data => (
       <>
         <Helmet
-          title={`${pageTitle} - ${data.site.siteMetadata.title}`}
+          title={`${ pageTitle } - ${ data.site.siteMetadata.title }`}
           meta={meta}
         >
           <html lang="en" />

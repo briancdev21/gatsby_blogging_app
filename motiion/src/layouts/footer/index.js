@@ -3,12 +3,12 @@ import { Link } from 'gatsby'
 
 import { Wrapper, MobileFooter, Logo, Links, Container, FlexContainer, CustomLink } from './components'
 import { LogoPng } from '../../images'
-import { PaddingDiv } from '../../components';
+import { PaddingDiv } from '../../components'
 
-const isMobile = window.innerWidth < 600;
+const isMobile = window.innerWidth < 600
 
 const Footer = () => (
-  <React.Fragment>  
+  <React.Fragment>
     {!isMobile && (<Wrapper>
       <Container>
         <FlexContainer>
