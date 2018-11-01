@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const FloatContactSection = styled.div`
   position: absolute;
@@ -39,4 +39,4 @@ const FloatContactSection = styled.div`
   }
 `
 
-export default FloatContactSection;
+export default FloatContactSection

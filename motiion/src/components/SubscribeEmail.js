@@ -3,11 +3,11 @@ import styled from 'styled-components'
 
 import RoundBtn from './RoundBtn'
 import PaddingDiv from './PaddingDiv'
-import { FlexContainer } from '../layouts/header/components';
+import { FlexContainer } from '../layouts/header/components'
 
 class SubscribeEmail extends Component {
-  render() {
-    const isMobile = window.innerWidth < 600;
+  render () {
+    const isMobile = window.innerWidth < 600
     return (
       <PaddingDiv top={6} bottom={6} left={6} right={6}
         style={{
@@ -16,22 +16,22 @@ class SubscribeEmail extends Component {
           width: '100%',
         }}
       >
-      <FlexContainer justifyContent="space-between"
-        style={{ flexFlow: isMobile ? 'column' : 'row'}}
-      >
-        <SearchInput placeholder="Enter email" />
-        <RoundBtn size={16} color={'#fff'} bgColor={'#013ebf'}
-          style={{ width: isMobile ? '100%' : 'auto'}}
+        <FlexContainer justifyContent="space-between"
+          style={{ flexFlow: isMobile ? 'column' : 'row' }}
         >
+          <SearchInput placeholder="Enter email" />
+          <RoundBtn size={16} color={'#fff'} bgColor={'#013ebf'}
+            style={{ width: isMobile ? '100%' : 'auto' }}
+          >
           Subscribe
-        </RoundBtn>
-      </FlexContainer>
+          </RoundBtn>
+        </FlexContainer>
       </PaddingDiv>
     )
   }
 }
 
-export default SubscribeEmail;
+export default SubscribeEmail
 
 const SearchInput = styled.input`
   border: none;

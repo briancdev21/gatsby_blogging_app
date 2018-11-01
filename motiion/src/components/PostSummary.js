@@ -1,14 +1,14 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 import React from 'react'
 import LinesEllipsis from 'react-lines-ellipsis'
 
-import { PaddingDiv, HorizontalLine, RoundBtn,  RobotoText } from '../components';
+import { PaddingDiv, HorizontalLine, RoundBtn, RobotoText } from '../components'
 
 const PostSummary = ({ blog, style, blackTheme, hideContent }) => {
-  const { fields: { title, content }, sys } = blog;
-  const bgColor = blackTheme ? '#000' : '#fff';
-  const btnColor = blackTheme ? '#fff' : '#013ebf';
-  const btnBgColor =  blackTheme ? '#013ebf' : '#fff';
+  const { fields: { title, content }, sys } = blog
+  const bgColor = blackTheme ? '#000' : '#fff'
+  const btnColor = blackTheme ? '#fff' : '#013ebf'
+  const btnBgColor = blackTheme ? '#013ebf' : '#fff'
   return (
     <Container style={style}>
       <PaddingDiv bottom={20}>
@@ -63,7 +63,7 @@ const PostSummary = ({ blog, style, blackTheme, hideContent }) => {
         </PaddingDiv>
       )}
       <PaddingDiv>
-        <RoundBtn link={sys && `./blogs/${sys.id}`} size={16} bgColor={btnBgColor} color={btnColor} >Read more</RoundBtn>
+        <RoundBtn link={sys && `./blogs/${ sys.id }`} size={16} bgColor={btnBgColor} color={btnColor} >Read more</RoundBtn>
       </PaddingDiv>
     </Container>
   )
@@ -83,6 +83,6 @@ const Container = styled.article`
   @media (max-width: 600px) {
     margin-bottom: 30px;
   }
-`;
+`
 
-export default PostSummary;
+export default PostSummary

@@ -36,4 +36,4 @@ const Img = styled.img`
   height: 4px;
 `
 
-export default BlogLoadMoreBtn;
+export default BlogLoadMoreBtn

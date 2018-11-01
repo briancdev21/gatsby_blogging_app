@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const BlogSide = ({ style, isMobile }) => {
   return (
-    <div style={{...style}} hidden={isMobile}>
+    <div style={{ ...style }} hidden={isMobile}>
       <FlexContainer>
         <Line />
         <Text>BLOG</Text>
@@ -12,8 +12,7 @@ const BlogSide = ({ style, isMobile }) => {
   )
 }
 
-export default BlogSide;
-
+export default BlogSide
 
 const FlexContainer = styled.div`
   position: absolute;
@@ -33,13 +32,13 @@ const Line = styled.div`
 `
 
 const Text = styled.div`
-	opacity: 0.6;
-	color: #FFFFFF;
-	font-family: "Roboto";
-	font-size: 18px;
-	font-weight: 200;
-	letter-spacing: 7.5px;
-	line-height: 48px;
+  opacity: 0.6;
+  color: #FFFFFF;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 200;
+  letter-spacing: 7.5px;
+  line-height: 48px;
   text-align: center;
   padding: 0 40px;
 `

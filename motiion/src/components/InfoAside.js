@@ -4,7 +4,7 @@ import { imgIllustration } from '../images'
 
 const InfoAside = ({ children, width }) => {
   return (
-    <div style={{width: width}}>
+    <div style={{ width: width }}>
       <Main>
         {children}
       </Main>
@@ -15,7 +15,7 @@ const InfoAside = ({ children, width }) => {
   )
 }
 
-export default InfoAside;
+export default InfoAside
 
 const Main = styled.div`
   text-align: right;
@@ -23,9 +23,9 @@ const Main = styled.div`
   width: 320px;
   height: 660px;
   background: #000;
-	color: #FFFFFF;
-	letter-spacing: 0.84px;
-	line-height: 60px;
+  color: #FFFFFF;
+  letter-spacing: 0.84px;
+  line-height: 60px;
   text-align: right;
 
   @media (max-width: 600px) {
@@ -38,7 +38,7 @@ const Main = styled.div`
   @media (max-width: 450px) {
     padding: 70px 10px;
   }
-`;
+`
 
 const SideBg = styled.div`
   position: absolute;
@@ -77,5 +77,4 @@ const SideBg = styled.div`
     padding: 10px;
     top: 280px;
   }
-  
-`;
+`

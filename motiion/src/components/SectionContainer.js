@@ -3,16 +3,17 @@ import styled from 'styled-components'
 
 const SectionContainer = ({ children, style, alignItems, column }) => {
   return (
-    <Container alignItems={alignItems} style={{...style}} column={column}>
+    <Container alignItems={alignItems} style={{ ...style }} column={column}>
       {children}
     </Container>
-)}
+  )
+}
 
-export default SectionContainer;
+export default SectionContainer
 
 const Container = styled.div`
-  display: ${props => props.column ? 'block' : 'flex'};
-  align-items: ${props => props.alignItems ? props.alignItems : 'flex-start'};
+  display: ${ props => props.column ? 'block' : 'flex' };
+  align-items: ${ props => props.alignItems ? props.alignItems : 'flex-start' };
   width: 960px;
   margin: auto;
   position: relative;
@@ -24,4 +25,4 @@ const Container = styled.div`
     justify-content: center;
     padding: 10px;
   }
-`;
+`

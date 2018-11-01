@@ -5,7 +5,7 @@ const Img = styled.img`
   width: 24px;
   margin: 0;
   margin-right: 10px;
-`;
+`
 
 const SocialIcon = ({ link, src }) => (
   <a href={link}>
@@ -13,4 +13,4 @@ const SocialIcon = ({ link, src }) => (
   </a>
 )
 
-export default SocialIcon;
+export default SocialIcon

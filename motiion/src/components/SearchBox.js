@@ -13,10 +13,10 @@ const SearchBox = ({ placeholder }) => {
 }
 
 const Input = styled.input`
-	height: 60px;
-	width: 540px;
-	border: 1px solid #979797;
-	border-radius: 3px;
+  height: 60px;
+  width: 540px;
+  border: 1px solid #979797;
+  border-radius: 3px;
   background-color: #FFFFFF;
   font-size: 20px;
   color: #000000AA;
@@ -55,4 +55,4 @@ const Img = styled.img`
   }
 `
 
-export default SearchBox;
+export default SearchBox

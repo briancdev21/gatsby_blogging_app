@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import React from 'react';
+import styled from 'styled-components'
+import React from 'react'
 
 const RectButton = ({ link, children }) => {
   return (
@@ -9,7 +9,7 @@ const RectButton = ({ link, children }) => {
   )
 }
 
-export default RectButton;
+export default RectButton
 
 const Container = styled.a`
   width: 300px;

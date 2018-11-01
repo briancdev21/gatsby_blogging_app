@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
-import { icArrowBlack } from '../images';
-import FlexContainer from './FlexContainer';
+import { icArrowBlack } from '../images'
+import FlexContainer from './FlexContainer'
 
 const BackBtn = ({ url, title }) => {
   return (
@@ -13,7 +13,7 @@ const BackBtn = ({ url, title }) => {
   )
 }
 
-export default BackBtn;
+export default BackBtn
 
 const Img = styled.img`
   margin: 0;

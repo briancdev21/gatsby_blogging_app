@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 import React from 'react'
 
 const RoundBtn = ({ link, children, bgColor, color, size, target, style }) => {
@@ -10,12 +10,12 @@ const RoundBtn = ({ link, children, bgColor, color, size, target, style }) => {
 }
 
 const Container = styled.a`
-  background-color: ${props => props.bgColor};
-	color: ${props => props.color ? props.color : '#FFFFFF'};
-	font-family: 'Roboto';
-	font-size: ${props => props.size}px;
-	letter-spacing: 0.83px;
-	line-height: 1em;
+  background-color: ${ props => props.bgColor };
+  color: ${ props => props.color ? props.color : '#FFFFFF' };
+  font-family: 'Roboto';
+  font-size: ${ props => props.size }px;
+  letter-spacing: 0.83px;
+  line-height: 1em;
   text-align: center;
   padding: 1em 2.5em;
   border-radius: 5px;
@@ -25,4 +25,4 @@ const Container = styled.a`
   text-decoration: none;
 `
 
-export default RoundBtn;
+export default RoundBtn

@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import React from 'react'
 
 const Tag = ({ name }) => (
-    <Round>
-      #{name}
-    </Round>
-);
+  <Round>
+    #{name}
+  </Round>
+)
 
 export default Tag
 

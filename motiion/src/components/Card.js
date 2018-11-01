@@ -23,6 +23,6 @@ const Card = styled.div`
     width: 100%;
     max-width: 100%;
   }
-`;
+`
 
-export default Card;
+export default Card

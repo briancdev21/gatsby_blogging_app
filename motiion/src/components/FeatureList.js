@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const FeatureList = styled.div`
   li {
@@ -12,4 +12,4 @@ const FeatureList = styled.div`
   }
 `
 
-export default FeatureList;
+export default FeatureList
