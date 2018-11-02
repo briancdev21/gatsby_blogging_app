@@ -40,6 +40,11 @@ export const Container = styled.div`
   margin: auto;
   display: flex;
   align-items: center;
+
+  @media (min-width: 600px) and (max-width: 1000px) {
+    width: 100%;
+    padding: 0 20px;
+  }
 `
 
 export const FlexContainer = styled.div`

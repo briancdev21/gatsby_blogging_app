@@ -15,7 +15,7 @@ import {
   Icon,
   CustomLink
 } from './components'
-import { PaddingDiv } from '../../components';
+import { PaddingDiv } from '../../components'
 import { icMenu, icClose, LogoPng, FacebookWhite, TwitterWhite, LinkedinWhite } from '../../images'
 
 class Header extends Component {
