@@ -3,16 +3,22 @@ import styled from 'styled-components'
 
 const BlogSide = ({ style, isMobile }) => {
   return (
-    <div style={{ ...style }} hidden={isMobile}>
+    <Container style={{ ...style }}>
       <FlexContainer>
         <Line />
         <Text>BLOG</Text>
       </FlexContainer>
-    </div>
+    </Container>
   )
 }
 
 export default BlogSide
+
+const Container = styled.div`
+  @media (max-width: 1200px) {
+    display: none;
+  }
+`
 
 const FlexContainer = styled.div`
   position: absolute;

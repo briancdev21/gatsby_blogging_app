@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import React from 'react'
 
-const RoundBtn = ({ link, children, bgColor, color, size, target, style }) => {
+const RoundBtn = ({ className, link, children, bgColor, color, size, target, style }) => {
   return (
-    <Container style={style} href={link} target={target} bgColor={bgColor} color={color} size={size}>
+    <Container className={className} style={style} href={link} target={target} bgColor={bgColor} color={color} size={size}>
       {children}
     </Container>
   )
