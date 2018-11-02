@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 export const CustomLink = styled(Link)`
-	opacity: 0.6;
-	color: #FFFFFF;
-	font-size: 20px;
-	letter-spacing: 0.67px;
+  opacity: 0.6;
+  color: #FFFFFF;
+  font-size: 20px;
+  letter-spacing: 0.67px;
   line-height: 24px;
   font-weight: 300;
   text-decoration: none;
@@ -34,7 +34,7 @@ export const CustomLink = styled(Link)`
       }
     }
   }
-`;
+`
 
 export const HeaderWrapper = styled.header`
   height: 60px;
@@ -49,7 +49,7 @@ export const HeaderWrapper = styled.header`
   @media (max-width: 600px) {
     display: none;
   }
-`;
+`
 
 export const Container = styled.div`
   width: 960px;
@@ -57,26 +57,31 @@ export const Container = styled.div`
   margin: auto;
   display: flex;
   align-items: center;
-`;
+
+  @media (min-width: 600px) and (max-width: 1000px) {
+    width: 100%;
+    padding: 0 20px;
+  }
+`
 
 export const FlexContainer = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-`;
+`
 
 export const Links = styled.div`
   display: flex;
   align-items: center;
-`;
+`
 
 export const Logo = styled.img`
   height: 30px;
   padding-right: 30px;
   margin: 0;
   margin-top: 8px;
-`;
+`
 
 export const Icon = styled.img`
   width: 24px;
@@ -90,7 +95,7 @@ export const Icon = styled.img`
     margin: 10px;
     cursor: pointer;
   }
-`;
+`
 
 export const MobileContainer = styled.header`
   display: none;
@@ -101,7 +106,7 @@ export const MobileContainer = styled.header`
     width: 100vw;
     justify-content: flex-start;
     align-items: center;
-    background-color: #1E22AA;
+    background-color: #1168DB;
     position: fixed;
     top: 0;
     left: 0;
@@ -119,7 +124,7 @@ export const MobileMenuPanel = styled.div`
   width: 100vw;
   text-align: left;
   padding: 30px;
-  background-color: #1E22AA;
+  background-color: #1168DB;
 `
 
 export const CloseLink = styled.img`
@@ -137,5 +142,5 @@ export const MobileWrapper = styled.div`
   z-index: 1001;
   width: 100vw;
   height: 100vh;
-  background-color: #1e22aa42;
+  background-color: #1168DB91;
 `
