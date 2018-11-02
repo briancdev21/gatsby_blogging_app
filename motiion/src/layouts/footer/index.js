@@ -9,7 +9,7 @@ const isMobile = window.innerWidth < 600
 
 const Footer = () => (
   <React.Fragment>
-    {!isMobile && (<Wrapper>
+    <Wrapper>
       <Container>
         <FlexContainer>
           <Link to="/"><Logo src={LogoPng} ></Logo></Link>
@@ -21,21 +21,18 @@ const Footer = () => (
         </FlexContainer>
       </Container>
     </Wrapper>
-    )}
-    {isMobile && (
-      <MobileFooter>
-        <PaddingDiv top={10}>
-          <Links>
-            <CustomLink to="/" activeClassName="active"><span>Home</span></CustomLink>
-            <CustomLink to="/careers" activeClassName="active"><span>Careers</span></CustomLink>
-            <CustomLink to="/blogs" activeClassName="active"><span>Blogs</span></CustomLink>
-          </Links>
-        </PaddingDiv>
-        <PaddingDiv top={10}>
-          <Link to="/"><Logo src={LogoPng} ></Logo></Link>
-        </PaddingDiv>
-      </MobileFooter>
-    )}
+    <MobileFooter>
+      <PaddingDiv top={10}>
+        <Links>
+          <CustomLink to="/" activeClassName="active"><span>Home</span></CustomLink>
+          <CustomLink to="/careers" activeClassName="active"><span>Careers</span></CustomLink>
+          <CustomLink to="/blogs" activeClassName="active"><span>Blogs</span></CustomLink>
+        </Links>
+      </PaddingDiv>
+      <PaddingDiv top={10}>
+        <Link to="/"><Logo src={LogoPng} ></Logo></Link>
+      </PaddingDiv>
+    </MobileFooter>
   </React.Fragment>
 )
 

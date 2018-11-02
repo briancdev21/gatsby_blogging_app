@@ -24,14 +24,22 @@ export const Wrapper = styled.footer`
   height: 100px;
   width: 100%;
   background-color: #000;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `
 
 export const MobileFooter = styled.footer`
-  background: #000;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  align-items: center;
+  display: none;
+
+  @media (max-width: 600px) {
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+  }
 `
 
 export const Container = styled.div`
