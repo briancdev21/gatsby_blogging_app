@@ -1,7 +1,18 @@
 import React from 'react'
 
 import { Layout } from '../../layouts'
-import { SectionContainer, PaddingDiv, PlayFairText, RobotoText, RoundBtn, FlexContainer, FlexView, BackBtn, HorizontalLine, RectButton } from '../../components'
+import {
+  SectionContainer,
+  PaddingDiv,
+  PlayFairText,
+  RobotoText,
+  RoundBtn,
+  FlexContainer,
+  FlexView,
+  BackBtn,
+  HorizontalLine,
+  RectButton
+} from '../../components'
 
 class JobPage extends React.Component {
   state = {
@@ -27,7 +38,6 @@ class JobPage extends React.Component {
   componentDidMount () {
     this.mounted = true
     this.loadJobDetail()
-    this.loadRelatedJobs()
   }
 
   componentWillUnmount () {
@@ -39,9 +49,10 @@ class JobPage extends React.Component {
     const n = pathname.lastIndexOf('/')
     const id = pathname.substring(n + 1)
     const cmp = this
+    /* eslint-disable no-undef */
     const oReq = new XMLHttpRequest()
     oReq.onreadystatechange = function () {
-      if (oReq.readyState == XMLHttpRequest.DONE) {
+      if (oReq.readyState === XMLHttpRequest.DONE) {
         cmp.loadData(oReq.responseText)
       }
     }
@@ -49,20 +60,46 @@ class JobPage extends React.Component {
     oReq.send()
   }
 
-  loadRelatedJobs = () => {
-    fetch('https://api.lever.co/v0/postings/motiion?skip=0&limit=3&mode=json')
+  loadJobsByLocation = jobDetail => {
+    /* eslint-disable no-undef */
+    fetch(`https://api.lever.co/v0/postings/motiion?location=${ jobDetail.categories.location }&skip=0&limit=4&mode=json`)
       .then(results => {
         return results.json()
       })
       .then(data => {
         if (this.mounted) {
-          this.setState({ relatedJobs: data })
+          let relatedJobs = []
+          relatedJobs = data.filter(j => j.id !== jobDetail.id)
+          if (relatedJobs.length < 3) {
+            this.loadJobsByTeam(jobDetail, relatedJobs)
+          } else {
+            this.setState({ relatedJobs })
+          }
+        }
+      })
+  }
+
+  loadJobsByTeam = (jobDetail, relatedJobs) => {
+    fetch(`https://api.lever.co/v0/postings/motiion?team=${ jobDetail.categories.team }&skip=0&mode=json`)
+      .then(results => {
+        return results.json()
+      })
+      .then(data => {
+        if (this.mounted) {
+          let jobs = data
+          relatedJobs.forEach(job => {
+            jobs = jobs.filter(j => j.id !== job.id)
+          })
+          jobs = relatedJobs.concat(jobs)
+          this.setState({ relatedJobs: jobs.slice(0, 3) })
         }
       })
   }
 
   loadData = data => {
     if (this.mounted) {
+      const jobDetail = JSON.parse(data)
+      this.loadJobsByLocation(jobDetail)
       this.setState({ data: JSON.parse(data) })
     }
   }
