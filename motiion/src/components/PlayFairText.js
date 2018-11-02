@@ -9,17 +9,17 @@ const PlayFairText = styled.div`
   line-height: ${ props => props.size > 60 ? 1.45 : 1.25 }em
     
   @media only screen and (max-width: 600px) {
-    font-size: ${ props => props.size * 0.9 }px;
+    font-size: ${ props => props.mobileSize ? props.mobileSize * 0.9 : props.size * 0.9 }px;
     line-height: ${ props => props.size > 60 ? 1.45 : 1.35 }em
   }
   
   @media only screen and (max-width: 500px) {
-    font-size: ${ props => props.size * 0.85 }px;
+    font-size: ${ props => props.mobileSize ? props.mobileSize * 0.85 : props.size * 0.85 }px;
     line-height: ${ props => props.size > 60 ? 1.45 : 1.4 }em
   }
 
   @media only screen and (max-width: 400px) {
-    font-size: ${ props => props.size * 0.8 }px;
+    font-size: ${ props => props.mobileSize ? props.mobileSize * 0.8 : props.size * 0.8 }px;
     line-height: ${ props => props.size > 60 ? 1.45 : 1.5 }em
   }
 `
