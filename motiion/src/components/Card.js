@@ -4,7 +4,7 @@ const Card = styled.div`
   background: #fff;
   max-width: calc(50% - 30px);
   display: flex;
-  flex: 1;
+  width: 320px;
   align-items: flex-start;
   justify-content: flex-start;;
   flex-direction: column;

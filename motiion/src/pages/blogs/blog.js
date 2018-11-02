@@ -36,7 +36,6 @@ class Blog extends Component {
 
   componentDidMount () {
     this.loadEntry()
-    this.loadEntries()
   }
 
   loadEntry = async () => {
@@ -48,22 +47,27 @@ class Blog extends Component {
     const entriesResponse = await client.getEntries({ 'sys.id': id })
     if (entriesResponse.total > 0) {
       const blog = entriesResponse.items[0]
-      this.setState({ blog })
+      this.loadEntries(blog)
     }
   }
 
-  loadEntries = async () => {
+  loadEntries = async blog => {
     const { blogs } = this.state
-    const { space, accessToken } = config.contentful
-    const client = getClient(space, accessToken)
-    const entriesResponse = await client.getEntries({
-      content_type: 'blogPost',
-      skip: 0,
-      limit: 3,
-      order: 'sys.createdAt'
-    })
-    const newBlogs = entriesResponse.items
-    this.setState({ blogs: blogs.concat(newBlogs) })
+    console.log('blog:', blog.sys.id)
+    if (blog.sys.id) {
+      const { space, accessToken } = config.contentful
+      const client = getClient(space, accessToken)
+      const entriesResponse = await client.getEntries({
+        content_type: 'blogPost',
+        skip: 0,
+        limit: 3,
+        order: '-sys.updatedAt',
+        'fields.tags[in]': blog.fields.tags.join(','),
+        'sys.id[ne]': blog.sys.id,
+      })
+      const newBlogs = entriesResponse.items
+      this.setState({ blogs: blogs.concat(newBlogs), blog })
+    }
   }
 
   calculateDateDiff = dateStr => {
