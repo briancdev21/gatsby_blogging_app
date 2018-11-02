@@ -55,7 +55,6 @@ class IndexPage extends Component {
   /* eslint-disable max-len */
   render () {
     const { blogs } = this.state
-    const isMobile = window.innerWidth < 600
     return (
       <React.Fragment>
         <Layout
@@ -67,8 +66,8 @@ class IndexPage extends Component {
         >
           <section>
             <SectionContainer
+              classes={'home-FirstWeEat'}
               alignItems="center"
-              style={{ minHeight: isMobile ? 520 : 660 }}
             >
               <FirstWeEatMain>
                 <PaddingDiv>
@@ -134,31 +133,25 @@ class IndexPage extends Component {
           </section>
           {/* 'What are we up to' Blog Section */}
           <section
-            style={{ background: '#111', height: isMobile ? 'auto' : 810, position: 'relative' }}
+            style={{ background: '#111', position: 'relative' }}
           >
-            <SectionContainer style={{ textAlign: 'center', display: 'block' }}>
+            <SectionContainer classes={'home-blogs'} style={{ textAlign: 'center', display: 'block' }}>
               <PaddingDiv top={80} bottom={20}>
                 <PlayFairText
-                  size={isMobile ? 40 : 60}
+                  mobileSize={40}
+                  size={60}
                   weight="900"
                   color="#fff"
                 >
-                  {!isMobile && (
-                    <PaddingDiv left={10} right={10}>
-                      What are we up to?
-                    </PaddingDiv>
-                  )}
-                  {isMobile && (
-                    <PaddingDiv left={50} right={50}>
-                      What are we up to?
-                    </PaddingDiv>
-                  )}
+                  <PaddingDiv className="section-title">
+                    What are we up to?
+                  </PaddingDiv>
                 </PlayFairText>
                 <PaddingDiv top={20} bottom={20}>
                   <MoreButton href={'/blogs'}>More blogs <img src={icArrowWhite} alt="white arrow"/></MoreButton>
                 </PaddingDiv>
                 <PaddingDiv top={40}>
-                  <div style={{ display: 'flex', flexFlow: 'row wrap', margin: isMobile ? 0 : '0 -15px' }}>
+                  <div className="blogs" style={{ display: 'flex', flexFlow: 'row wrap' }}>
                     {blogs.map((blog, index) => (
                       <FlexView key={index} size={1} style={{ margin: 15 }}>
                         <PostSummary blog={blog} />
@@ -168,7 +161,7 @@ class IndexPage extends Component {
                 </PaddingDiv>
               </PaddingDiv>
             </SectionContainer>
-            <BlogSide isMobile={isMobile} />
+            <BlogSide />
           </section>
           {/* Contact Section */}
           <section style={{ position: 'relative' }}>
@@ -178,13 +171,8 @@ class IndexPage extends Component {
                 <HorizontalLine size={60} color="#fff" height={1} />
                 <HorizontalLine size={60} color="#fff" height={1} />
               </div>
-              {isMobile && (
-                <PaddingDiv top={40} />
-              )}
-              <SectionContainer style={{ minHeight: 0, height: '100%' }}>
-                <FlexView size={5}
-                  style={{ padding: isMobile ? '50px 0' : 0 }}
-                >
+              <SectionContainer classes={'home-FloatContact'}>
+                <FlexView size={5} className="left">
                   <FlexContainer
                     style={{
                       flexDirection: 'column',
@@ -192,54 +180,45 @@ class IndexPage extends Component {
                       justifyContent: 'center',
                     }}
                   >
-                    <PlayFairText size={isMobile ? 50 : 36} color="#fff" weight={900}>
+                    <PlayFairText mobileSize={50} size={36} color="#fff" weight={900}>
                       Stay in touch?
                     </PlayFairText>
                     <PaddingDiv top={5} botom={5}>
-                      <RobotoText size={isMobile ? 25 : 20} color="#fff" weight={300}>
+                      <RobotoText mobileSize={25} size={20} color="#fff" weight={300}>
                         Sign up for updates from Motiion
                       </RobotoText>
                     </PaddingDiv>
                   </FlexContainer>
                 </FlexView>
-                <FlexView size={7}
-                  style={{ width: isMobile ? '100%' : 'auto' }}
-                >
+                <FlexView size={7} className="right">
                   <FlexContainer>
                     <SubscribeEmail />
                   </FlexContainer>
                 </FlexView>
               </SectionContainer>
-              {isMobile && (
-                <PaddingDiv top={100} />
-              )}
               <div className="side" />
             </FloatContactSection>
           </section>
 
           {/* Personal Info Section */}
-          <section style={{ background: '' }}>
-            <PaddingDiv
-              top={isMobile ? 100 : 220}
-              bottom={140}
-              style={{ width: isMobile ? '100%' : 1280, margin: 'auto' }}
-            >
+          <section className="home-PersonalInfo">
+            <div className="title_sec">
               <FlexContainer>
                 <HorizontalLine
+                  className={'home-PersonalInfo'}
                   color={'#1e22aa'}
-                  size={isMobile ? 30 : 260}
                   height={1}
                   style={{ flex: 1 }}
                 />
                 <div style={{ textAlign: 'center', width: '70%' }}>
-                  <PlayFairText size={isMobile ? 45 : 60} weight={900} color={'#000'}>
+                  <PlayFairText mobileSize={45} size={60} weight={900} color={'#000'}>
                     We have built large scale technology companies
                   </PlayFairText>
                 </div>
-                <HorizontalLine color={'#1e22aa'} size={isMobile ? 30 : 260} height={1} style={{ flex: 1 }}/>
+                <HorizontalLine color={'#1e22aa'} height={1} style={{ flex: 1 }}/>
               </FlexContainer>
-            </PaddingDiv>
-            <SectionContainer style={{ flexDirection: 'column' }}>
+            </div>
+            <SectionContainer style={{ flexDirection: 'column' }} classes={'home-profileSec'}>
               <Profile
                 title="Are Traasdahl"
                 userRole="FOUNDER / CEO"

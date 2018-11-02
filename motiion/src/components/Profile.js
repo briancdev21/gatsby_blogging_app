@@ -4,15 +4,14 @@ import { Facebook, Twitter, Linkedin } from '../images'
 import { PaddingDiv, RobotoText, FlexContainer, FlexView, ProfileLogo, SocialIcon } from '../components'
 
 const Profile = ({ title, userRole, content, profileLink }) => {
-  const isMobile = window.innerWidth < 600
   return (
     <FlexContainer
-      alignItems={isMobile ? 'center' : 'flex-start'}
-      style={{ flexDirection: isMobile ? 'column' : 'row' }}>
+      className={'profile'}
+    >
       <FlexView size={2}>
         <ProfileLogo src={profileLink} />
       </FlexView>
-      <FlexView size={10} style={{ textAlign: isMobile ? 'center' : 'left' }}>
+      <FlexView className="content" size={10}>
         <RobotoText size={36} color={'#000'} weight={600}>
           {title}
         </RobotoText>

@@ -24,7 +24,20 @@ const FloatContactSection = styled.div`
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 1350px) and (min-width: 780px) {
+    position: static;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    width: 100%;
+    padding: 0 10px;
+
+    & .side {
+      display: none;
+    }
+  }
+
+  @media (max-width: 780px) {
     position: static;
     top: 0;
     left: 0;

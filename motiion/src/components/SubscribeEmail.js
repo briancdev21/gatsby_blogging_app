@@ -2,36 +2,48 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import RoundBtn from './RoundBtn'
-import PaddingDiv from './PaddingDiv'
 import { FlexContainer } from '../layouts/header/components'
 
 class SubscribeEmail extends Component {
   render () {
-    const isMobile = window.innerWidth < 600
     return (
-      <PaddingDiv top={6} bottom={6} left={6} right={6}
-        style={{
-          backgroundColor: '#fff',
-          borderRadius: 5,
-          width: '100%',
-        }}
-      >
+      <Container>
         <FlexContainer justifyContent="space-between"
-          style={{ flexFlow: isMobile ? 'column' : 'row' }}
+          className="container"
         >
           <SearchInput placeholder="Enter email" />
-          <RoundBtn size={16} color={'#fff'} bgColor={'#013ebf'}
-            style={{ width: isMobile ? '100%' : 'auto' }}
+          <RoundBtn
+            className="subscribe_btn" size={16} color={'#fff'} bgColor={'#013ebf'}
           >
           Subscribe
           </RoundBtn>
         </FlexContainer>
-      </PaddingDiv>
+      </Container>
     )
   }
 }
 
 export default SubscribeEmail
+
+const Container = styled.div`
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  padding: 6px;
+
+  @media (max-width: 600px) {
+    & .container {
+      flex-direction: column;
+    }
+    & input {
+      width: 100%;
+    }
+    & .subscribe_btn {
+      width: 100%;
+      margin: 0 10px;
+    }
+  }
+`
 
 const SearchInput = styled.input`
   border: none;
@@ -42,9 +54,4 @@ const SearchInput = styled.input`
   padding: 0 20px;
   flex: 1;
   margin-right: 10px;
-
-  @media (max-width: 600px) {
-    width: 100%;
-    margrin: 0;
-  }
 `

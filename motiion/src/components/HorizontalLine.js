@@ -6,6 +6,10 @@ const HorizontalLine = styled.div`
   height: ${ props => props.height }px;
   border-radius: 1.5px;
   display: inline-block;
+  
+  &.home-PersonalInfo {
+    max-width: 260px;
+  }
 
   @media (max-width: 600px) {
     &.home-our_tech {
@@ -16,6 +20,7 @@ const HorizontalLine = styled.div`
     &.home-InfoDetail {
       display: none;
     }
+
   }
 `
 

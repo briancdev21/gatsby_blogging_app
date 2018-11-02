@@ -18,6 +18,10 @@ export const FirstWeEatSideBg = styled.div`
   }
 
   @media only screen and (max-width: 960px) {
+    right: -30px;
+  }
+
+  @media only screen and (max-width: 600px) {
     display: none;
   }
 `
