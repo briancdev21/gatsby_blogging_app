@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const SectionContainer = ({ children, style, alignItems, column }) => {
+const SectionContainer = ({ children, style, alignItems, column, classes }) => {
   return (
-    <Container alignItems={alignItems} style={{ ...style }} column={column}>
+    <Container className={classes} alignItems={alignItems} style={{ ...style }} column={column}>
       {children}
     </Container>
   )
@@ -24,5 +24,14 @@ const Container = styled.div`
     flex-flow: column;
     justify-content: center;
     padding: 10px;
+  }
+
+  @media only screen and (max-width: 980px) {
+    &.fluid {
+      width: 100%;
+      flex-flow: column;
+      justify-content: center;
+      padding: 10px;
+    }
   }
 `

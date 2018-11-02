@@ -6,6 +6,17 @@ const HorizontalLine = styled.div`
   height: ${ props => props.height }px;
   border-radius: 1.5px;
   display: inline-block;
+
+  @media (max-width: 600px) {
+    &.home-our_tech {
+      display: none;
+    }
+  }
+  @media (max-width: 980px) {
+    &.home-InfoDetail {
+      display: none;
+    }
+  }
 `
 
 export default HorizontalLine

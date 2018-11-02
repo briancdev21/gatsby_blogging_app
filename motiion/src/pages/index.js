@@ -96,24 +96,24 @@ class IndexPage extends Component {
           </section>
           {/* 'Our Technologies ...' Section */}
           <section style={{ background: '#f5f5f5', overflow: 'hidden' }}>
-            <SectionContainer style={{ padding: 0 }}>
-              <InfoAside width={isMobile ? '100%' : 320}>
-                <PlayFairText size="48" weight="900" color="#fff">
+            <SectionContainer style={{ padding: 0 }} classes={'fluid'}>
+              <InfoAside>
+                <PlayFairText className="title" size="48" weight="900" color="#fff">
                   Our technology supports the global food industry
                 </PlayFairText>
                 <HorizontalLine
+                  className={'home-our_tech'}
                   size={60}
                   color="#fff"
                   height={4}
-                  style={{ display: isMobile ? 'none' : 'inline-block' }}
                 />
               </InfoAside>
               <InfoDetail>
                 <HorizontalLine
                   size={6000}
+                  className={'home-InfoDetail'}
                   color="#1e22aa"
                   height={2}
-                  style={{ display: isMobile ? 'none' : 'block' }}
                 />
                 <p>
                   We’ re a global technology team developing solutions to support the global food industry.The Motiion Platform supports information flows within and across companies in the food value chain, enabling players in the industry to focus on their own specific tools and systems.
