@@ -13,7 +13,11 @@ export const FirstWeEatSideBg = styled.div`
     width: 100%;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1078px) {
+    right: 20px;
+  }
+
+  @media only screen and (max-width: 960px) {
     display: none;
   }
 `
@@ -23,11 +27,17 @@ export const FirstWeEatMain = styled.div`
   top: 0;
   left: 0;
   z-index: 10;
-  @media only screen and (max-width: 600px) {
+
+  @media only screen and (max-width: 1078px) {
     max-width: 100%;
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
   }
+
+  @media only screen and (max-width: 600px) {
+    padding: 10px;
+  }
+
 `
 
 export const InfoDetail = styled.div`
