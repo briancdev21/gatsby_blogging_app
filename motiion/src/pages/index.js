@@ -229,13 +229,14 @@ class IndexPage extends Component {
                   color={'#1e22aa'}
                   size={isMobile ? 30 : 260}
                   height={1}
+                  style={{ flex: 1 }}
                 />
-                <FlexView size={1} style={{ textAlign: 'center' }}>
+                <div style={{ textAlign: 'center', width: '70%' }}>
                   <PlayFairText size={isMobile ? 45 : 60} weight={900} color={'#000'}>
                     We have built large scale technology companies
                   </PlayFairText>
-                </FlexView>
-                <HorizontalLine color={'#1e22aa'} size={isMobile ? 30 : 260} height={1} />
+                </div>
+                <HorizontalLine color={'#1e22aa'} size={isMobile ? 30 : 260} height={1} style={{ flex: 1 }}/>
               </FlexContainer>
             </PaddingDiv>
             <SectionContainer style={{ flexDirection: 'column' }}>
