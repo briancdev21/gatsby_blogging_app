@@ -17,12 +17,11 @@ const Card = styled.div`
   &:hover {
     box-shadow: 0 4px 28px 14px rgba(0,0,0,0.12), 0px 1px 12px 1px rgba(0,0,0,0.24);
   }
-
-  @media (max-width: 600px) {
-    min-width: 300px !important;
+  @media (max-width: 960px) {
+    max-width: 600px;
     width: 100%;
-    max-width: 100%;
+    margin: 20px auto;
   }
-`
+  `
 
 export default Card

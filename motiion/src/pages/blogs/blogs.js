@@ -50,7 +50,6 @@ class Blogs extends Component {
 
   render () {
     const { blogs } = this.state
-    const isMobile = window.innerWidth < 600
     return (
       <React.Fragment>
         <Layout
@@ -61,13 +60,13 @@ class Blogs extends Component {
           ]}
         >
           <section>
-            <SectionContainer column>
+            <SectionContainer classes="blogs" column>
               <PaddingDiv top={20} bottom={10}>
                 <BackBtn url={'/'} title={'Home'} />
               </PaddingDiv>
               <PaddingDiv top={10} bottom={40}>
                 <FlexContainer justifyContent="space-between">
-                  <PlayFairText weight="900" size={72} color="#000">
+                  <PlayFairText className={'blogs-title'} weight="900" size={72} color="#000">
                     Blogs
                   </PlayFairText>
                   <SearchBox placeholder="Search blog" />
@@ -76,7 +75,7 @@ class Blogs extends Component {
             </SectionContainer>
           </section>
           <section style={{ background: '#f5f5f5' }}>
-            <SectionContainer column>
+            <SectionContainer classes="blogs" column>
               <PaddingDiv top={60} bottom={40}>
                 <FlexContainer style={{ flexFlow: 'row wrap', margin: '0 -15px', justifyContent: 'flex-start' }}>
                   {blogs.map((blog, index) => (
@@ -89,8 +88,8 @@ class Blogs extends Component {
               <FlexContainer>
                 <BlogLoadMoreBtn moreLoadHander={this.moreLoadHander} />
               </FlexContainer>
+              <PaddingDiv className="bottom-padding"/>
             </SectionContainer>
-            <PaddingDiv bottom={isMobile ? 100 : 300} />
           </section>
         </Layout>
       </React.Fragment>

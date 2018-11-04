@@ -33,10 +33,18 @@ const Container = styled.div`
   top: 0;
   left: 0;
 
+  @media (max-width: 960px) {
+    display: block;
+    margin: 20px 0;
+  }
+
   @media (max-width: 600px) {
     width: 38px;
     height: 38px;
+    display: inline-block;
+    margin: 0;
   }
+
 `
 
 const Img = styled.img`

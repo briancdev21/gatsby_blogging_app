@@ -51,6 +51,13 @@ const Container = styled.div`
     padding-bottom: 100px;
   }
 
+  &.blogs {
+    .bottom-padding {
+      padding-bottom: 300px;
+    }
+
+  }
+
   @media only screen and (max-width: 1040px) {
     &.careers {
       padding: 0 20px;
@@ -81,6 +88,14 @@ const Container = styled.div`
         article {
           margin-bottom: 50px;
         }
+      }
+    }
+
+    &.blogs {
+      padding: 0 20px;
+
+      .blogs-title {
+        width: 100%;
       }
     }
   }
@@ -147,6 +162,17 @@ const Container = styled.div`
 
       .openposition-cards {
         padding-bottom: 70px;
+      }
+    }
+
+    &.blogs {
+      padding: 0 10px;
+      .blogs-title {
+        width: auto;
+      }
+
+      .bottom-padding {
+        padding-bottom: 100px;
       }
     }
   }
