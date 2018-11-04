@@ -20,6 +20,16 @@ const MoreButton = styled.a`
     margin: 0;
     margin-left: 10px;
   }
+
+  &.opportunities {
+    justifyContent: 'flex-start';
+  }
+
+  @media (max-width: 600px) {
+    &.opportunities {
+      justifyContent: 'center';
+    }
+  }
 `
 
 export default MoreButton

@@ -42,9 +42,7 @@ class CareersPage extends Component {
   }
   /* eslint-disable max-len */
   render () {
-    const isMobile = window.innerWidth < 600
     const { opportunities } = this.state
-    console.log('opportunities', opportunities)
     return (
       <React.Fragment>
         <Layout
@@ -55,11 +53,11 @@ class CareersPage extends Component {
           ]}
         >
           <section>
-            <SectionContainer column>
+            <SectionContainer classes={'careers'} column>
               <PaddingDiv top={20} bottom={10}>
                 <BackBtn url={'/'} title={'Home'} />
               </PaddingDiv>
-              <PaddingDiv top={10} bottom={isMobile ? 0 : 40}>
+              <PaddingDiv top={10} className="main-title">
                 <PlayFairText weight="900" size={72} color="#000">
                   Careers
                 </PlayFairText>
@@ -67,7 +65,7 @@ class CareersPage extends Component {
             </SectionContainer>
           </section>
           <section>
-            <SectionContainer column>
+            <SectionContainer classes={'careers'} column>
               <PaddingDiv top={20} bottom={20}>
                 <RobotoText size="24" weight="600" color="#000">
                   Why we are here
@@ -91,12 +89,12 @@ class CareersPage extends Component {
                 </p>
               </div>
               <PaddingDiv bottom={60}>
-                <MoreButton style={{ color: '#013ebf', justifyContent: isMobile ? 'center' : 'flex-start' }} href={'#opportunities'}>See opportunities <img src={icArrowBlue} alt="white arrow"/></MoreButton>
+                <MoreButton className="opportunities" style={{ color: '#013ebf' }} href={'#opportunities'}>See opportunities <img src={icArrowBlue} alt="white arrow"/></MoreButton>
               </PaddingDiv>
             </SectionContainer>
           </section>
           <section style={{ background: '#F5F5F5' }}>
-            <SectionContainer column>
+            <SectionContainer classes={'careers'} column>
               <PaddingDiv top={80} bottom={20}>
                 <RobotoText size="24" weight="600" color="#000">
                   Why we are different
@@ -107,7 +105,22 @@ class CareersPage extends Component {
               </PaddingDiv>
               <PaddingDiv bottom={10} top={10}>
                 <FlexContainer style={{ padding: 0 }}>
-                  <FlexView size={2} hidden={isMobile}>
+                  <FlexView size={2} className="emptyLogoSection">
+                    <img src={EmptyLogo} alt="Empty Logo" className="emptyLogo" />
+                  </FlexView>
+                  <FlexView size={10}>
+                    <RobotoText size="24" weight="600" color="#000">
+                      A strong founder team
+                    </RobotoText>
+                    <PaddingDiv bottom={40} top={20}>
+                      Our main goals with Motiion are easy to explain: We want to build a company that we would like to enjoy spending the rest of our careers in, that has a positive impact on the world and that will outlast us. Achieving these goals will be challenging, but we know we can do it. Here’s why:
+                    </PaddingDiv>
+                  </FlexView>
+                </FlexContainer>
+              </PaddingDiv>
+              <PaddingDiv bottom={10} top={10}>
+                <FlexContainer style={{ padding: 0 }}>
+                  <FlexView size={2} className="emptyLogoSection">
                     <img src={EmptyLogo} alt="Empty Logo" />
                   </FlexView>
                   <FlexView size={10}>
@@ -122,23 +135,8 @@ class CareersPage extends Component {
               </PaddingDiv>
               <PaddingDiv bottom={10} top={10}>
                 <FlexContainer style={{ padding: 0 }}>
-                  <FlexView size={2} hidden={isMobile} >
-                    <img src={EmptyLogo} alt="Empty Logo"/>
-                  </FlexView>
-                  <FlexView size={10}>
-                    <RobotoText size="24" weight="600" color="#000">
-                      A strong founder team
-                    </RobotoText>
-                    <PaddingDiv bottom={40} top={20}>
-                      Our main goals with Motiion are easy to explain: We want to build a company that we would like to enjoy spending the rest of our careers in, that has a positive impact on the world and that will outlast us. Achieving these goals will be challenging, but we know we can do it. Here’s why:
-                    </PaddingDiv>
-                  </FlexView>
-                </FlexContainer>
-              </PaddingDiv>
-              <PaddingDiv bottom={10} top={10}>
-                <FlexContainer style={{ padding: 0 }}>
-                  <FlexView size={2} hidden={isMobile} >
-                    <img src={EmptyLogo} alt="Empty Logo" />
+                  <FlexView size={2} className="emptyLogoSection">
+                    <img src={EmptyLogo} alt="Empty Logo" className="emptyLogo" />
                   </FlexView>
                   <FlexView size={10}>
                     <RobotoText size="24" weight="600" color="#000">
@@ -152,8 +150,8 @@ class CareersPage extends Component {
               </PaddingDiv>
               <PaddingDiv bottom={10} top={10}>
                 <FlexContainer style={{ padding: 0 }}>
-                  <FlexView size={2} hidden={isMobile} >
-                    <img src={EmptyLogo} alt="Empty Logo" />
+                  <FlexView size={2} className="emptyLogoSection">
+                    <img src={EmptyLogo} alt="Empty Logo" className="emptyLogo" />
                   </FlexView>
                   <FlexView size={10}>
                     <RobotoText size="24" weight="600" color="#000">
@@ -168,8 +166,8 @@ class CareersPage extends Component {
               </PaddingDiv>
               <PaddingDiv bottom={10} top={10}>
                 <FlexContainer style={{ padding: 0 }}>
-                  <FlexView size={2} hidden={isMobile}>
-                    <img src={EmptyLogo} alt="Empty Logo" />
+                  <FlexView size={2} className="emptyLogoSection">
+                    <img src={EmptyLogo} alt="Empty Logo" className="emptyLogo" />
                   </FlexView>
                   <FlexView size={10}>
                     <RobotoText size="24" weight="600" color="#000">
@@ -183,8 +181,8 @@ class CareersPage extends Component {
               </PaddingDiv>
               <PaddingDiv bottom={10} top={10}>
                 <FlexContainer style={{ padding: 0 }}>
-                  <FlexView size={2} hidden={isMobile}>
-                    <img src={EmptyLogo} alt="Empty Logo" />
+                  <FlexView size={2} className="emptyLogoSection">
+                    <img src={EmptyLogo} alt="Empty Logo" className="emptyLogo" />
                   </FlexView>
                   <FlexView size={10}>
                     <RobotoText size="24" weight="600" color="#000">
@@ -201,14 +199,14 @@ class CareersPage extends Component {
           </section>
           {/*  */}
           <section style={{ background: '#F5F5F5' }} id="opportunities">
-            <SectionContainer column>
-              <PaddingDiv top={isMobile ? 50 : 70} bottom={30}>
+            <SectionContainer classes={'careers'} column>
+              <PaddingDiv className="openposition-title" bottom={30}>
                 <RobotoText size="24" weight="600" color="#000">
                   Open positions
                 </RobotoText>
               </PaddingDiv>
-              <PaddingDiv bottom={isMobile ? 70 : 100}>
-                <FlexContainer justifyContent={isMobile ? 'center' : 'space-between'} style={{ margin: '0 -15px' }}>
+              <PaddingDiv className="openposition-cards">
+                <FlexContainer className={'careers-openpositions'} style={{ margin: '0 -15px' }}>
                   {opportunities && opportunities.map((opportunity, index) => (
                     <RectButton link={`/jobs/${ opportunity.id }`} key={index}>
                       <PaddingDiv right={30} left={30}>
@@ -221,18 +219,18 @@ class CareersPage extends Component {
                 </FlexContainer>
                 <PaddingDiv bottom={35} />
                 <FlexContainer>
-                  {!isMobile && (
+                  <div className="openpositions-bottom">
                     <RobotoText size="18" weight="400" color="#00000060">
                       Sounds interesting? Take a look at our open positions!
                     </RobotoText>
-                  )}
-                  {isMobile && (
+                  </div>
+                  <div className="mobile-openpositions-bottom">
                     <PaddingDiv style={{ width: 300 }}>
-                      <RobotoText size="24" weight="400" color="#000000">
+                      <RobotoText size="20" weight="400" color="#000000">
                         Sounds interesting? Take a look at our open positions!
                       </RobotoText>
                     </PaddingDiv>
-                  )}
+                  </div>
                 </FlexContainer>
               </PaddingDiv>
             </SectionContainer>
