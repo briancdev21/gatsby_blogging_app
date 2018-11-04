@@ -16,6 +16,18 @@ const FlexContainer = styled.div`
     }
   }
 
+  &.careers-openpositions {
+    justifyContent: space-between;
+  }
+
+
+  @media (max-width: 600px) {
+    &.careers-openpositions {
+      justifyContent: flex-start;
+    }
+  }
+
+
   @media (max-width: 600px) {
     padding: 0 10px;
 
@@ -26,6 +38,10 @@ const FlexContainer = styled.div`
       .content {
         text-align: center;
       }
+    }
+
+    &.careers-openpositions {
+      justifyContent: center;
     }
   }
 `

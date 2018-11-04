@@ -5,8 +5,6 @@ import { Wrapper, MobileFooter, Logo, Links, Container, FlexContainer, CustomLin
 import { LogoPng } from '../../images'
 import { PaddingDiv } from '../../components'
 
-const isMobile = window.innerWidth < 600
-
 const Footer = () => (
   <React.Fragment>
     <Wrapper>
