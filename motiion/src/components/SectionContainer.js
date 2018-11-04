@@ -14,7 +14,8 @@ export default SectionContainer
 const Container = styled.div`
   display: ${ props => props.column ? 'block' : 'flex' };
   align-items: ${ props => props.alignItems ? props.alignItems : 'flex-start' };
-  width: 960px;
+  max-width: 960px;
+  width: 100%;
   margin: auto;
   position: relative;
   position: relative;
@@ -36,6 +37,24 @@ const Container = styled.div`
   &.home-FloatContact {
     min-height: 0;
     height: 100%
+  }
+  
+  .main-title {
+    padding-bottom: 40px;
+  }
+
+  .openposition-title {
+    padding-top: 70px;
+  }
+
+  .openposition-cards {
+    padding-bottom: 100px;
+  }
+
+  @media only screen and (max-width: 1040px) {
+    &.careers {
+      padding: 0 20px;
+    }
   }
 
   @media only screen and (max-width: 1000px) {
@@ -112,6 +131,22 @@ const Container = styled.div`
       }
       .right {
         width: 100%;
+      }
+    }
+
+    &.careers {
+      padding: 0 10px;
+
+      .main-title {
+        padding-bottom: 0px;
+      }
+
+      .openposition-title {
+        padding-top: 50px;
+      }
+
+      .openposition-cards {
+        padding-bottom: 70px;
       }
     }
   }
