@@ -169,7 +169,7 @@ class Blog extends Component {
                 </RobotoText>
               </PaddingDiv>
               <PaddingDiv bottom={100}>
-                <FlexContainer justifyContent="flex-start" style={{ margin: '0 -15px' }}>
+                <FlexContainer justifyContent="flex-start" className="relatedBlogs">
                   {blogs.map((blog, index) => (
                     <Card key={index}>
                       <PostSummary blog={blog} blackTheme hideContent />

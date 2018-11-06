@@ -77,7 +77,7 @@ class Blogs extends Component {
           <section style={{ background: '#f5f5f5' }}>
             <SectionContainer classes="blogs" column>
               <PaddingDiv top={60} bottom={40}>
-                <FlexContainer style={{ flexFlow: 'row wrap', margin: '0 -15px', justifyContent: 'flex-start' }}>
+                <FlexContainer className="blogs-container">
                   {blogs.map((blog, index) => (
                     <Card key={index} style={{ minWidth: '40%', width: 'auto' }}>
                       <PostSummary blog={blog} blackTheme />
