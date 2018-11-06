@@ -214,7 +214,6 @@ class JobPage extends React.Component {
               <PaddingDiv bottom={100}>
                 <FlexContainer
                   className="relatedjobs"
-                  style={{ margin: '0 -15px' }}
                 >
                   {relatedJobs && relatedJobs.map((opportunity, index) => (
                     <RectButton link={`/jobs/${ opportunity.id }`} key={index}>

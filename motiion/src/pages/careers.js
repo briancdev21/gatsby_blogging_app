@@ -207,7 +207,7 @@ class CareersPage extends Component {
                 </RobotoText>
               </PaddingDiv>
               <PaddingDiv className="openposition-cards">
-                <FlexContainer className={'careers-openpositions'} style={{ margin: '0 -15px' }}>
+                <FlexContainer className={'careers-openpositions'}>
                   {opportunities && opportunities.map((opportunity, index) => (
                     <RectButton link={`/jobs/${ opportunity.id }`} key={index}>
                       <PaddingDiv right={30} left={30}>
