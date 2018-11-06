@@ -58,6 +58,15 @@ const Container = styled.div`
 
   }
 
+  &.blogdetail {
+    .blogdetail-title {
+      font-size: 72px;
+    }
+    .title-container {
+      padding-bottom: 40px;
+    }
+  }
+
   @media only screen and (max-width: 1040px) {
     &.careers {
       padding: 0 20px;
@@ -162,6 +171,16 @@ const Container = styled.div`
 
       .openposition-cards {
         padding-bottom: 70px;
+      }
+    }
+
+
+    &.blogdetail {
+      .blogdetail-title {
+        font-size: 48px;
+      }
+      .title-container {
+        padding-bottom: 20px;
       }
     }
 

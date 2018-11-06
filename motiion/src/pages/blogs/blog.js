@@ -114,7 +114,6 @@ class Blog extends Component {
     const { blog, blogs } = this.state
     const { fields: { title, author, tags, content }, sys: { createdAt } } = blog
     const postedDate = this.calculateDateDiff(createdAt)
-    const isMobile = window.innerWidth < 600
     return (
       <React.Fragment>
         <Layout
@@ -125,13 +124,13 @@ class Blog extends Component {
           ]}
         >
           <section>
-            <SectionContainer column>
-              <PaddingDiv top={isMobile ? 10 : 20} bottom={10}>
+            <SectionContainer classes="blogdetail" column>
+              <PaddingDiv top={20} bottom={10}>
                 <BackBtn url={'/blogs'} title={'Blogs'} />
               </PaddingDiv>
-              <PaddingDiv top={10} bottom={isMobile ? 20 : 40}>
+              <PaddingDiv top={10} className="title-container">
                 <FlexContainer justifyContent="space-between">
-                  <PlayFairText weight="900" size={isMobile ? 48 : 72} color="#000" style={{ textTransform: 'capitalize' }}>
+                  <PlayFairText weight="900" className="blogdetail-title" color="#000" style={{ textTransform: 'capitalize' }}>
                     {title}
                   </PlayFairText>
                 </FlexContainer>
