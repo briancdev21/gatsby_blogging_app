@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
 
-html, body {
+html,
+body {
   font-family: 'Roboto', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
 body {
   margin: 0;
   overflow: hidden;
@@ -15,10 +17,14 @@ li {
   margin-bottom: 0.5em;
 }
 
+form {
+  margin: 0;
+}
+
 .featurelist li {
-    margin-left: 25px;
-    list-style: none;
-  }
+  margin-left: 25px;
+  list-style: none;
+}
 
 .featurelist li:before {
   content: '\2022';
@@ -46,6 +52,7 @@ li {
     display: none;
   }
 }
+
 @media (max-width: 600px) {
   .featurelist li {
     margin-left: 25px;
@@ -74,9 +81,27 @@ section.home-PersonalInfo div.title_sec {
   width: 100%;
 }
 
+.relatedBlogs {
+  margin: 0 -15px;
+}
+
 @media (max-width: 1350px) {
   section.home-PersonalInfo div.title_sec {
     padding-top: 140px;
-    padding: 0;
+    padding-bottom: 100px;
+  }
+
+
+}
+
+@media (max-width: 600px) {
+  section.home-PersonalInfo div.title_sec {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .relatedBlogs {
+    margin: 0;
   }
 }

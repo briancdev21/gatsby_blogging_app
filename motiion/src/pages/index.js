@@ -210,7 +210,7 @@ class IndexPage extends Component {
                   height={1}
                   style={{ flex: 1 }}
                 />
-                <div style={{ textAlign: 'center', width: '70%' }}>
+                <div style={{ textAlign: 'center', width: '80%' }}>
                   <PlayFairText mobileSize={45} size={60} weight={900} color={'#000'}>
                     We have built large scale technology companies
                   </PlayFairText>
