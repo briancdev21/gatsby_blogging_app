@@ -30,6 +30,7 @@ class CareersPage extends Component {
   }
 
   loadJobs = () => {
+    /* eslint-disable */
     fetch('https://api.lever.co/v0/postings/motiion?skip=0&limit=3&mode=json')
       .then(results => {
         return results.json()

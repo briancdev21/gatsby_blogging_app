@@ -1,7 +1,7 @@
 import React from 'react'
 
 import JobDetail from './job'
-import Careers from '../Careers'
+import Careers from '../careers'
 
 const JobsPage = props => {
   const { pathname } = props.location
