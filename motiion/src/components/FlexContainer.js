@@ -18,12 +18,14 @@ const FlexContainer = styled.div`
 
   &.careers-openpositions {
     justifyContent: space-between;
+    margin: 0 -15px;
   }
 
 
   @media (max-width: 600px) {
     &.careers-openpositions {
       justifyContent: flex-start;
+      margin: 0;
     }
   }
 
@@ -42,6 +44,7 @@ const FlexContainer = styled.div`
 
     &.careers-openpositions {
       justifyContent: center;
+      margin: 0;
     }
   }
 `

@@ -22,6 +22,7 @@ const Container = styled.div`
 
   .relatedjobs {
     justify-content: flex-start;
+    margin: 0 -15px;
   }
   
   &.home-blogs {
@@ -60,6 +61,11 @@ const Container = styled.div`
       padding-bottom: 300px;
     }
 
+    .blogs-container {
+      flex-flow: row wrap;
+      margin: 0 -15px;
+      justify-content: flex-start;
+    }
   }
 
   &.blogdetail {
@@ -114,11 +120,12 @@ const Container = styled.div`
 
     .relatedjobs {
       justify-content: center;
+      margin: 0 -15px;
     }
 
     &.home-profileSec {
       width: 100%;
-      padding: 0 20px;
+      padding: 0 10px;
     }
 
     &.home-blogs {
@@ -169,6 +176,7 @@ const Container = styled.div`
 
     .relatedjobs {
       justify-content: center;
+      margin: 0;
     }
 
     &.jobdetail {
@@ -181,7 +189,7 @@ const Container = styled.div`
 
     &.home-profileSec {
       width: 100%;
-      padding: 0 10px;
+      padding: 0;
     }
   
     &.home-blogs {
@@ -237,6 +245,10 @@ const Container = styled.div`
 
       .bottom-padding {
         padding-bottom: 100px;
+      }
+
+      .blogs-container {
+        margin: 0px;
       }
     }
 

@@ -22,12 +22,12 @@ const MoreButton = styled.a`
   }
 
   &.opportunities {
-    justifyContent: 'flex-start';
+    justify-content: flex-start;
   }
 
   @media (max-width: 600px) {
     &.opportunities {
-      justifyContent: 'center';
+      justify-content: center;
     }
   }
 `
