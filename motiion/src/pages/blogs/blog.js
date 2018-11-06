@@ -147,7 +147,7 @@ class Blog extends Component {
             </SectionContainer>
           </section>
           <section style={{ background: '#f5f5f5' }}>
-            <SectionContainer column>
+            <SectionContainer classes="blogdetail" column>
               <PaddingDiv top={40} bottom={40}>
                 <RobotoText size={18} weight={300} color={'#000000a3'} dangerouslySetInnerHTML={{ __html: content }}>
                 </RobotoText>
@@ -161,7 +161,7 @@ class Blog extends Component {
             <PaddingDiv bottom={40} />
           </section>
           <section style={{ backgroundColor: '#f5f5f5' }}>
-            <SectionContainer column>
+            <SectionContainer classes="blogdetail" column>
               <HorizontalLine height={2} color={'#979797'} style={{ width: '100%' }} />
               <PaddingDiv top={50} bottom={30}>
                 <RobotoText size="24" weight="600" color="#000">

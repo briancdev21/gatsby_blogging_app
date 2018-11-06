@@ -107,8 +107,6 @@ class JobPage extends React.Component {
   render () {
     const { data, relatedJobs } = this.state
     const { text: title, categories, applyUrl, description, lists } = data
-    console.log('title:', title)
-    const isMobile = window.innerWidth < 600
     return (
       <React.Fragment>
         <Layout
@@ -119,7 +117,7 @@ class JobPage extends React.Component {
           ]}
         >
           <section>
-            <SectionContainer column>
+            <SectionContainer classes="jobdetail" column>
               <PaddingDiv top={20} bottom={20}>
                 <BackBtn url={'/careers'} title={'Careers'} />
               </PaddingDiv>
@@ -128,7 +126,7 @@ class JobPage extends React.Component {
                   {title}
                 </PlayFairText>
               </PaddingDiv>
-              <PaddingDiv top={0} bottom={isMobile ? 60 : 30}>
+              <PaddingDiv top={0} className="meta">
                 <FlexContainer style={{ padding: 0 }}>
                   <FlexView size={1}>
                     <ul>
@@ -137,7 +135,7 @@ class JobPage extends React.Component {
                       <li><RobotoText size={18} weight={500} >{categories.commitment || ''}</RobotoText></li>
                     </ul>
                   </FlexView>
-                  <div style={{ width: isMobile ? '100%' : 'auto' }}>
+                  <div className="applybtn-container">
                     <RoundBtn
                       link={applyUrl}
                       target="_blank"
@@ -145,7 +143,8 @@ class JobPage extends React.Component {
                       size={20}
                       bgColor="#013EBF"
                       color="#fff"
-                      style={{ paddingRight: '1.5em', paddingLeft: '1.5em', width: isMobile ? '100%' : 'auto' }}
+                      className="applybtn"
+                      style={{ paddingRight: '1.5em', paddingLeft: '1.5em' }}
                     >
                       Apply for this job
                     </RoundBtn>
@@ -155,7 +154,7 @@ class JobPage extends React.Component {
             </SectionContainer>
           </section>
           <section style={{ backgroundColor: '#f5f5f5' }}>
-            <SectionContainer column>
+            <SectionContainer classes="jobdetail" column>
               <PaddingDiv top={40} bottom={20}>
                 <RobotoText size="24" weight="600" color="#000">
                   About the company
@@ -168,7 +167,7 @@ class JobPage extends React.Component {
           </section>
           {lists.map((list, index) => (
             <section style={{ backgroundColor: '#f5f5f5' }} key={index}>
-              <SectionContainer column>
+              <SectionContainer classes="jobdetail" column>
                 <PaddingDiv top={40} bottom={20}>
                   <RobotoText size="24" weight="600" color="#000">
                     {list.text}
@@ -181,19 +180,16 @@ class JobPage extends React.Component {
             </section>
           ))}
           <section style={{ backgroundColor: '#f5f5f5' }}>
-            <SectionContainer style={{ justifyContent: 'center' }}>
-              <PaddingDiv
-                top={isMobile ? 0 : 50}
-                bottom={isMobile ? 50 : 80}
-                style={{ width: isMobile ? '100%' : 'auto' }}
-              >
+            <SectionContainer classes="jobdetail3 jobdetail" style={{ justifyContent: 'center' }}>
+              <PaddingDiv className="jobdetail3-applybtn-container">
                 <FlexContainer>
                   <RoundBtn
                     size={20}
                     link={applyUrl}
                     bgColor="#013EBF"
                     color="#fff"
-                    style={{ paddingRight: '1.5em', paddingLeft: '1.5em', width: isMobile ? '100%' : 'auto' }}
+                    className="applybtn"
+                    style={{ paddingRight: '1.5em', paddingLeft: '1.5em' }}
                   >
                     Apply for this job
                   </RoundBtn>
@@ -204,7 +200,7 @@ class JobPage extends React.Component {
           <section
             style={{ backgroundColor: '#f5f5f5' }}
           >
-            <SectionContainer column>
+            <SectionContainer classes="jobdetail" column>
               <HorizontalLine
                 height={2}
                 color={'#979797'}
@@ -217,7 +213,7 @@ class JobPage extends React.Component {
               </PaddingDiv>
               <PaddingDiv bottom={100}>
                 <FlexContainer
-                  justifyContent={isMobile ? 'center' : 'flex-start'}
+                  className="relatedjobs"
                   style={{ margin: '0 -15px' }}
                 >
                   {relatedJobs && relatedJobs.map((opportunity, index) => (

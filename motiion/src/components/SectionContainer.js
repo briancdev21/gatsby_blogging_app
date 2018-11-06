@@ -19,6 +19,10 @@ const Container = styled.div`
   margin: auto;
   position: relative;
   position: relative;
+
+  .relatedjobs {
+    justify-content: flex-start;
+  }
   
   &.home-blogs {
     height: 810px;
@@ -59,6 +63,7 @@ const Container = styled.div`
   }
 
   &.blogdetail {
+
     .blogdetail-title {
       font-size: 72px;
     }
@@ -67,8 +72,34 @@ const Container = styled.div`
     }
   }
 
+  &.jobdetail {
+    .meta {
+      padding-bottom: 30px;
+    }
+    .applybtn-container {
+      width: auto;
+    }
+    .applybtn {
+      width: auto;
+    }
+  }
+
+  &.jobdetail3 {
+    .jobdetail3-applybtn-container {
+      padding-top: 50px;
+      padding-bottom: 80px;
+      width: auto;
+    }
+  }
+
   @media only screen and (max-width: 1040px) {
     &.careers {
+      padding: 0 20px;
+    }
+    &.jobdetail {
+      padding: 0 20px;
+    }
+    &.blogdetail {
       padding: 0 20px;
     }
   }
@@ -79,6 +110,10 @@ const Container = styled.div`
       flex-flow: column;
       justify-content: center;
       padding: 10px;
+    }
+
+    .relatedjobs {
+      justify-content: center;
     }
 
     &.home-profileSec {
@@ -132,6 +167,14 @@ const Container = styled.div`
     justify-content: center;
     padding: 10px;
 
+    .relatedjobs {
+      justify-content: center;
+    }
+
+    &.jobdetail {
+      padding: 0 10px;
+    }
+
     &.home-FirstWeEat {
       min-height: 520px;
     }
@@ -176,6 +219,8 @@ const Container = styled.div`
 
 
     &.blogdetail {
+      padding: 0 10px;
+
       .blogdetail-title {
         font-size: 48px;
       }
@@ -192,6 +237,25 @@ const Container = styled.div`
 
       .bottom-padding {
         padding-bottom: 100px;
+      }
+    }
+
+    &.jobdetail {
+      .meta {
+        padding-bottom: 60px;
+      }
+      .applybtn-container {
+        width: 100%;
+      }
+      .applybtn {
+        width: 100%;
+      }
+    }
+    &.jobdetail3 {
+      .jobdetail3-applybtn-container {
+        padding-top: 0;
+        padding-bottom: 50px;
+        width: 100%;
       }
     }
   }
