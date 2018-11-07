@@ -69,7 +69,7 @@ class Blogs extends Component {
                   <PlayFairText className={'blogs-title'} weight="900" size={72} color="#000">
                     Blogs
                   </PlayFairText>
-                  <SearchBox placeholder="Search blog" />
+                  {/* <SearchBox placeholder="Search blog" /> */}
                 </FlexContainer>
               </PaddingDiv>
             </SectionContainer>
