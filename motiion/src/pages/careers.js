@@ -90,7 +90,7 @@ class CareersPage extends Component {
                 </p>
               </div>
               <PaddingDiv bottom={60}>
-                <MoreButton className="opportunities" style={{ color: '#013ebf' }} href={'#opportunities'}>See opportunities <img src={icArrowBlue} alt="white arrow"/></MoreButton>
+                <MoreButton className="opportunities" style={{ color: '#013ebf' }} to={'/careers/#opportunities'}>See opportunities <img src={icArrowBlue} alt="white arrow"/></MoreButton>
               </PaddingDiv>
             </SectionContainer>
           </section>
@@ -209,7 +209,7 @@ class CareersPage extends Component {
               <PaddingDiv className="openposition-cards">
                 <FlexContainer className={'careers-openpositions'}>
                   {opportunities && opportunities.map((opportunity, index) => (
-                    <RectButton link={`/jobs/${ opportunity.id }`} key={index}>
+                    <RectButton link={`/jobs/${ opportunity.id }/`} key={index}>
                       <PaddingDiv right={30} left={30}>
                         <RobotoText size="24" weight="500" color="#013ebf">
                           {opportunity.text}
