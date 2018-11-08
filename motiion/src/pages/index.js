@@ -80,9 +80,9 @@ class IndexPage extends Component {
                 <PaddingDiv>
                   <RoundBtn
                     size={20}
-                    bgColor="#013ebf"
+                    bgcolor="#013ebf"
                     color="#fff"
-                    link="/careers"
+                    link="/careers/"
                   >
                     Learn more
                   </RoundBtn>
@@ -148,7 +148,7 @@ class IndexPage extends Component {
                   </PaddingDiv>
                 </PlayFairText>
                 <PaddingDiv top={20} bottom={20}>
-                  <MoreButton href={'/blogs'}>More blogs <img src={icArrowWhite} alt="white arrow"/></MoreButton>
+                  <MoreButton to={'/blogs/'}>More blogs <img src={icArrowWhite} alt="white arrow"/></MoreButton>
                 </PaddingDiv>
                 <PaddingDiv top={40}>
                   <div className="blogs" style={{ display: 'flex', flexFlow: 'row wrap' }}>

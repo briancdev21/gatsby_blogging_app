@@ -1,16 +1,17 @@
 import styled from 'styled-components'
 import React from 'react'
+import { Link } from 'gatsby'
 
-const RoundBtn = ({ className, link, children, bgColor, color, size, target, style }) => {
+const RoundBtn = ({ className, link, children, bgcolor, color, size, target, style }) => {
   return (
-    <Container className={className} style={style} href={link} target={target} bgColor={bgColor} color={color} size={size}>
+    <Container className={className} style={style} to={link} target={target} bgcolor={bgcolor} color={color} size={size}>
       {children}
     </Container>
   )
 }
 
-const Container = styled.a`
-  background-color: ${ props => props.bgColor };
+const Container = styled(Link)`
+  background-color: ${ props => props.bgcolor };
   color: ${ props => props.color ? props.color : '#FFFFFF' };
   font-family: 'Roboto';
   font-size: ${ props => props.size }px;
