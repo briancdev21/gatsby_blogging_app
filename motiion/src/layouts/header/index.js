@@ -37,8 +37,8 @@ class Header extends Component {
             <FlexContainer>
               <Links>
                 <CustomLink to="/" activeClassName="active"><span>Home</span></CustomLink>
-                <CustomLink to="/careers" activeClassName="active"><span>Careers</span></CustomLink>
-                <CustomLink to="/blogs" activeClassName="active"><span>Blogs</span></CustomLink>
+                <CustomLink to="/careers/" activeClassName="active"><span>Careers</span></CustomLink>
+                <CustomLink to="/blogs/" activeClassName="active"><span>Blogs</span></CustomLink>
               </Links>
               <Links>
                 <Icon src={FacebookWhite} ></Icon>
@@ -62,10 +62,10 @@ class Header extends Component {
                 <CustomLink to="/" activeClassName="active"><span>Home</span></CustomLink>
               </PaddingDiv>
               <PaddingDiv top={35} bottom={25}>
-                <CustomLink to="/careers" activeClassName="active"><span>Careers</span></CustomLink>
+                <CustomLink to="/careers/" activeClassName="active"><span>Careers</span></CustomLink>
               </PaddingDiv>
               <PaddingDiv top={35} bottom={25}>
-                <CustomLink to="/blogs" activeClassName="active"><span>Blogs</span></CustomLink>
+                <CustomLink to="/blogs/" activeClassName="active"><span>Blogs</span></CustomLink>
               </PaddingDiv>
 
               <PaddingDiv top={50} bottom={15} style={{ margin: '0 5px' }}>
