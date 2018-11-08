@@ -13,6 +13,7 @@ const PostSummary = ({ blog, style, blackTheme, hideContent }) => {
     <Container style={style}>
       <PaddingDiv bottom={20}>
         <RoundBtn
+          link={sys && `/blogs/?id=${ sys.id }`}
           style={{
             borderRadius: 18,
             border: `solid 1px #979797`,
@@ -20,7 +21,7 @@ const PostSummary = ({ blog, style, blackTheme, hideContent }) => {
             fontWeight: 900
           }}
           size={12}
-          bgColor="transparent"
+          bgcolor="transparent"
           color={bgColor}
         >
           WAY OF WORK
@@ -63,7 +64,7 @@ const PostSummary = ({ blog, style, blackTheme, hideContent }) => {
         </PaddingDiv>
       )}
       <PaddingDiv>
-        <RoundBtn link={sys && `./blogs/${ sys.id }`} size={16} bgColor={btnBgColor} color={btnColor} >Read more</RoundBtn>
+        <RoundBtn link={sys && `/blogs/${ sys.id }/`} size={16} bgcolor={btnBgColor} color={btnColor} >Read more</RoundBtn>
       </PaddingDiv>
     </Container>
   )

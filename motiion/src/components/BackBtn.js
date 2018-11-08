@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 import { icArrowBlack } from '../images'
 import FlexContainer from './FlexContainer'
@@ -8,7 +9,7 @@ const BackBtn = ({ url, title }) => {
   return (
     <FlexContainer justifyContent="flex-start" style={{ padding: 0 }}>
       <Img src={icArrowBlack} alt="back" />Back to
-      <a href={url} style={{ textDecoration: 'none', padding: '0 6px', color: '#013EBF' }}>{title}</a>
+      <Link to={url} style={{ textDecoration: 'none', padding: '0 6px', color: '#013EBF' }}>{title}</Link>
     </FlexContainer>
   )
 }
