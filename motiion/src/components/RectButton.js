@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 import React from 'react'
+import { Link } from 'gatsby'
 
 const RectButton = ({ link, children }) => {
   return (
-    <Container href={link}>
+    <Container to={link}>
       {children}
     </Container>
   )
@@ -11,7 +12,7 @@ const RectButton = ({ link, children }) => {
 
 export default RectButton
 
-const Container = styled.a`
+const Container = styled(Link)`
   width: 300px;
   height: 300px;
   background: #fff;

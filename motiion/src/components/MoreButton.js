@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
-const MoreButton = styled.a`
+const MoreButton = styled(Link)`
   color: #FFFFFF;
   font-family: "Roboto";
   font-size: 18px;
